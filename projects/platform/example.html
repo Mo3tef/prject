@@ -10,13 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lama+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-
-
-
     <style>
         @font-face {
             font-family: 'VIP Hala Bold';
             src: url('/platform/VIP\ Hala\ Bold\ VIP\ Hala\ Bold.otf') format('opentype');
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
@@ -25,12 +26,26 @@
             padding: 0;
             background-color: #fff;
             color: #222;
+            overflow-x: hidden;
         }
 
         header {
             background: url('header-bg.png') no-repeat center/cover;
             text-align: center;
-            padding: 80px 20px;
+            padding: 120px 20px;
+            margin-top: 80px;
+        }
+
+        @media (max-width: 1024px) {
+            header {
+                padding: 80px 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 20px;
+            }
         }
 
         header h1 {
@@ -43,17 +58,6 @@
         }
 
         .buttons {
-            margin-top: 20px;
-            background-color: #cddc39;
-            border: none;
-            padding: 10px 20px;
-            margin: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.2s;
-        }
-
-        .buttons {
             background-color: #cddc39;
             border-radius: 5px;
             padding: 10px 20px;
@@ -64,10 +68,10 @@
             font-size: 20px;
             color: #064556;
             transition: transform 0.2s;
+            border: none;
         }
 
         .button {
-
             border-radius: 5px;
             padding: 10px 20px;
             margin: 5px;
@@ -77,6 +81,7 @@
             font-size: 20px;
             color: #064556;
             transition: transform 0.2s;
+            border: none;
         }
 
         .section {
@@ -90,13 +95,21 @@
         }
 
         .section img {
-            width: 450px;
-            height: 450px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 1200px) {
+            .section img {
+                width: 450px;
+                height: 450px;
+            }
         }
 
         .stats {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 40px;
             background-color: #f8f8f8;
             padding: 40px 20px;
@@ -104,23 +117,28 @@
 
         .stats div {
             font-size: 18px;
+            min-width: 150px;
+            text-align: center;
         }
 
         .card-container {
             display: flex;
-            justify-content: space-between;
-            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
             padding-bottom: 50px;
         }
 
         .course-card {
             position: relative;
-            width: 500px;
+            width: 100%;
+            max-width: 500px;
+            min-width: 280px;
             border-radius: 20px;
             overflow: visible;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s;
-            flex: 1;
+            margin: 0 auto;
         }
 
         .course-card:hover {
@@ -129,22 +147,23 @@
 
         .course-card img {
             width: 100%;
-            height: 349.41px;
+            height: auto;
+            min-height: 250px;
             object-fit: cover;
             border-radius: 20px;
             display: block;
         }
 
         .floating-box {
-            height: 98px;
+            height: auto;
+            min-height: 98px;
             position: absolute;
             bottom: -60px;
             right: 20px;
             left: 20px;
             background: white;
             border-radius: 12px;
-            padding: 20px;
-            padding-bottom: 0px;
+            padding: 15px;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
             text-align: right;
             z-index: 2;
@@ -181,7 +200,6 @@
             align-items: center;
         }
 
-
         .socials img {
             width: 30px;
             margin: 0 10px;
@@ -217,6 +235,7 @@
             font-size: 20px;
             padding: 10px;
             margin: 30px;
+            min-width: 300px;
         }
 
         div h2 {
@@ -238,20 +257,17 @@
             height: auto;
         }
 
-
         .social-icons {
-
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 25px;
             margin-top: 30px;
         }
 
         .icon a {
             color: inherit;
-            /* يضمن أن اللون يبقى كما هو */
             text-decoration: none;
-            /* يمنع إضافة خط تحت الرابط */
         }
 
         .icon {
@@ -273,7 +289,6 @@
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
         }
 
-        /* Colors from image */
         .icon.tiktok {
             background-color: #000000;
         }
@@ -288,40 +303,42 @@
         }
 
         .whatsapp i {
-    color: #25d366; /* اللون الأخضر الخاص بواتساب */
-}
-
+            color: #25d366;
+        }
 
         .text h1 {
             font-family: 'VIP Hala Bold', sans-serif;
             font-size: 48px;
             color: #303506;
+        }
 
+        @media (max-width: 768px) {
+            .text h1 {
+                font-size: 36px;
+            }
         }
 
         #headline {
             font-family: 'VIP Hala Bold', sans-serif;
             font-size: 48px;
             color: #C7CD8E;
-
-
         }
 
-        .buttons:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-            transition: transform 0.5s;
+        @media (max-width: 768px) {
+            #headline {
+                font-size: 36px;
+            }
         }
 
-        .button:hover {
+        .buttons:hover, .button:hover {
             transform: scale(1.1);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
             transition: transform 0.5s;
         }
 
         .social-divider {
-            width: 500px;
-            /* أو أي نسبة/px حسب التصميم */
+            width: 100%;
+            max-width: 500px;
             height: 5px;
             background:
                 url('https://www.transparenttextures.com/patterns/asfalt-dark.png'),
@@ -329,16 +346,11 @@
             background-blend-mode: overlay;
             margin: 20px auto;
             border-radius: 2px;
-            margin: 20px auto;
-            /* مركزه تحت الأيقونات */
-            border-radius: 2px;
-
         }
 
         .qoute {
             font-family: 'VIP Hala Bold', sans-serif;
             font-size: 15px;
-
         }
 
         #navbar {
@@ -358,11 +370,15 @@
             padding: 0px 32px;
             margin: 0px 7px;
             height: 80px;
-
         }
 
-        .left-section,
-        .right-section {
+        @media (max-width: 768px) {
+            .navbar-content {
+                padding: 0px 15px;
+            }
+        }
+
+        .left-section, .right-section {
             display: flex;
             align-items: center;
         }
@@ -386,16 +402,24 @@
             color: #1e567a;
         }
 
-        /* محتوى وهمي للتمرير */
-        .content {
-            padding: 150px 20px;
-            height: 2000px;
+        @media (max-width: 768px) {
+            .right-section a {
+                font-size: 12px;
+                margin-left: 10px;
+                padding: 8px 12px;
+            }
         }
 
         .main-text {
             font-size: 24px;
             color: #000;
             margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .main-text {
+                font-size: 20px;
+            }
         }
 
         .highlighted-text {
@@ -405,10 +429,21 @@
             margin: 8px;
         }
 
+        @media (max-width: 768px) {
+            .highlighted-text {
+                font-size: 20px;
+            }
+        }
 
         .secondary-text {
             font-size: 24px;
             color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .secondary-text {
+                font-size: 20px;
+            }
         }
 
         .line-container {
@@ -416,16 +451,10 @@
             align-items: center;
             justify-content: center;
             margin: 20px 0;
-
         }
 
         .diamond-left,
-        .diamond-right {
-            width: 12px;
-            height: 12px;
-            transform: rotate(45deg);
-        }
-
+        .diamond-right,
         .diamonds-left,
         .diamonds-right {
             width: 12px;
@@ -446,7 +475,6 @@
 
         .diamond-right {
             background-color: #f1f8da;
-
             margin-right: 0;
         }
 
@@ -457,14 +485,15 @@
         }
 
         .line {
-            width: 528px;
+            width: 100%;
+            max-width: 528px;
             height: 3px;
-
             background: linear-gradient(to Right, #004B5F 0%, #C2D83B 60%);
         }
 
         .lines {
-            width: 528px;
+            width: 100%;
+            max-width: 528px;
             height: 3px;
             margin-bottom: 20px;
             background: #004B5F;
@@ -480,13 +509,16 @@
             border: none;
             cursor: pointer;
             transition: 400ms;
-
             font-weight: bold;
             font-family: 'VIP Hala Bold', sans-serif;
             font-size: 20px;
+        }
 
-
-
+        @media (max-width: 768px) {
+            .buttons, .button, .buttons-book {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
         }
 
         .buttons-book.text {
@@ -496,92 +528,122 @@
             transition: 400ms;
         }
 
-
-
         .buttons-book:hover {
             background-color: #0c4b5c;
             color: white;
             transform: scale(1.1);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
             transition: transform 0.5s;
-
         }
-/* Media Query for Tablets in Landscape Mode */
-@media (max-width: 1024px) and (orientation: landscape) {
-  body {
-    font-size: 14px; /* تقليل حجم الخط */
-    padding: 10px; /* إضافة بعض الفراغات */
-  }
 
-  .container {
-    max-width: 90%; /* توسيع المساحة الداخلية */
-    margin: 0 auto; /* توسيط المحتوى */
-  }
+        /* Responsive adjustments for tablet */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            header {
+                padding: 100px 20px;
+            }
+            
+            .split-section .text, 
+            .split-section .image {
+                flex: 1 1 45%;
+            }
+            
+            .course-card {
+                width: 45%;
+            }
+            
+            .buttons, .button, .buttons-book {
+                font-size: 18px;
+            }
+        }
 
-  header, footer {
-    padding: 10px 0; /* تقليل المسافة بين عناصر الـheader والـfooter */
-  }
+        /* Portrait mode for tablets */
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+            header h1 span {
+                font-size: 48px !important;
+            }
+            
+            .split-section {
+                flex-direction: column;
+            }
+            
+            .course-card {
+                width: 80%;
+            }
+        }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-  }
+        /* Landscape mode for tablets */
+        @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            .split-section {
+                flex-direction: row;
+            }
+            
+            .course-card {
+                width: 30%;
+            }
+        }
 
-  .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* عرض الأعمدة بشكل متجاور */
-    gap: 10px; /* إضافة فراغ بين الأعمدة */
-  }
-
-  .sidebar {
-    display: none; /* إخفاء الـsidebar في الوضع الأفقي */
-  }
-
-  .main-content {
-    width: 100%;
-    padding: 20px; /* زيادة المساحة داخل المحتوى الرئيسي */
-  }
-}
-
-/* Adjust for larger screens (like desktops) */
-@media (min-width: 1025px) {
-  body {
-    font-size: 16px;
-  }
-
-  .content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة على الشاشات الكبيرة */
-  }
-}
-
-
+        /* Mobile devices */
+        @media (max-width: 767px) {
+            header {
+                padding: 80px 15px;
+                margin-top: 70px;
+            }
+            
+            header h1 span {
+                font-size: 36px !important;
+            }
+            
+            .split-section {
+                flex-direction: column;
+            }
+            
+            .split-section .text {
+                margin: 15px;
+                min-width: auto;
+            }
+            
+            .course-card {
+                width: 100%;
+                margin-bottom: 70px;
+            }
+            
+            .navbar-content {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+            
+            .right-section {
+                margin-top: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .right-section a {
+                margin: 5px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div id="navbar">
         <div class="navbar-content">
-
-
             <div class="right-section">
                 <a href="#" class="buttons"><i class="fas fa-home"></i> أنشئ حسابك!</a>
                 <a href="#" class="button"><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</a>
-
             </div>
             <div class="left-section">
                 <div class="logo">
                     <img src="logolight.cc349eb4e46cbc3494cf.png" alt="Einstein Logo" class="logo-img">
                 </div>
-
             </div>
         </div>
     </div>
 
-
     <header>
-        <h1><span style="  margin: 0; font-weight: 900;  font-size: 60px; color: #125667 ">Physics </span> <span
-                style="margin: 0; font-weight: 900;  font-size: 64px; color: #cddc39">Society</span></h1>
+        <h1><span style="margin: 0; font-weight: 900; font-size: 60px; color: #125667">Physics </span> 
+            <span style="margin: 0; font-weight: 900; font-size: 64px; color: #cddc39">Society</span></h1>
         <div class="line-container">
             <div class="diamond-right"></div>
             <div class="line"></div>
@@ -590,7 +652,7 @@
         <div class="main-text">منصة هتحببك وتميزك في الفيزياء</div>
         <div class="secondary-text">مع <span class="highlighted-text">م/ حافط ابو شادي</span></div>
 
-        <div style="  margin: 30px;">
+        <div style="margin: 30px;">
             <button class="buttons">انضم لينا</button>
             <button class="buttons-book">اطلب كتابك الآن!</button>
         </div>
@@ -616,17 +678,14 @@
                 بجوايز مش هتخطر على بالك .. هنروق على الأوائل المتفوقين</p>
             <button class="buttons">سجل وجرب </button>
         </div>
-        <div class="imaga">
+        <div class="image">
             <img src="./snapedit_1745352769380.png" alt="صورة المدرس">
         </div>
     </section>
 
-
-
     <section class="section">
-        <h1><span
-                style="   font-family: 'VIP Hala Bold', sans-serif;  margin: 0; font-size: 48px; color: #111827 ">نظمتهالك</span>
-            <span style="  font-family: 'VIP Hala Bold', sans-serif; margin: 0;   font-size: 48px; color: #cddc39"> يا
+        <h1><span style="font-family: 'VIP Hala Bold', sans-serif; margin: 0; font-size: 48px; color: #111827">نظمتهالك</span>
+            <span style="font-family: 'VIP Hala Bold', sans-serif; margin: 0; font-size: 48px; color: #cddc39"> يا
                 صديقي</span></h1>
 
         <div class="line-container">
@@ -635,8 +694,8 @@
             <div class="diamonds-left"></div>
         </div>
         <section class="posts-container">
-            <a href="#">
-                <div class="card-container">
+            <div class="card-container">
+                <a href="#">
                     <div class="course-card">
                         <img src="./WhatsApp Image 2025-04-24 at 02.43.39.jpeg" alt="Einstein" />
                         <div class="floating-box">
@@ -645,10 +704,9 @@
                             <span>جميع كورسات الصف الاول الثانوي</span>
                         </div>
                     </div>
+                </a>
 
-            </a>
-            <a href="#">
-                <div class="card-container">
+                <a href="#">
                     <div class="course-card">
                         <img src="./year2.2b99157b74d5b714af40.png" alt="Einstein" />
                         <div class="floating-box">
@@ -657,10 +715,9 @@
                             <span>جميع كورسات الصف الثاني الثانوي</span>
                         </div>
                     </div>
+                </a>
 
-            </a>
-            <a href="#">
-                <div class="card-container">
+                <a href="#">
                     <div class="course-card">
                         <img src="./year3.4c4d455fa6551d831e58.png" alt="Einstein" />
                         <div class="floating-box">
@@ -669,9 +726,8 @@
                             <span>جميع كورسات الصف الثالث الثانوي</span>
                         </div>
                     </div>
-
-            </a>
-
+                </a>
+            </div>
         </section>
     </section>
 
@@ -693,9 +749,6 @@
 
         <div class="social-divider"></div>
 
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
         <div style="text-align: center; color: white; font-family: 'Comfortaa', sans-serif; font-size: 16px;">
             <div style="margin-bottom: 10px;">
                 <i class="fa-solid fa-heart fa-beat" style="color: #ff4d6d; margin: 0 8px;"></i>
@@ -710,7 +763,6 @@
                 &lt; All Copy Rights Reserved @2025 &gt;
             </div>
         </div>
-
     </footer>
 
     <button id="toTop">⬆️ لفوق</button>
@@ -734,10 +786,6 @@
             });
         });
 
-
-
-
-
         let prevScrollPos = window.scrollY;
         const navbar = document.getElementById("navbar");
 
@@ -754,5 +802,4 @@
         });
     </script>
 </body>
-
 </html>
