@@ -14,336 +14,499 @@
 
 
     <style>
-@font-face {
-    font-family: 'VIP Hala Bold';
-    src: url('/platform/VIP\ Hala\ Bold\ VIP\ Hala\ Bold.otf') format('opentype');
+        @font-face {
+            font-family: 'VIP Hala Bold';
+            src: url('/platform/VIP\ Hala\ Bold\ VIP\ Hala\ Bold.otf') format('opentype');
+        }
+
+        body {
+            font-family: 'Almarai', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #222;
+        }
+
+        header {
+            background: url('header-bg.png') no-repeat center/cover;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            background-color: #cddc39;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .buttons {
+            background-color: #cddc39;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'VIP Hala Bold', sans-serif;
+            font-size: 20px;
+            color: #064556;
+            transition: transform 0.2s;
+        }
+
+        .button {
+
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'VIP Hala Bold', sans-serif;
+            font-size: 20px;
+            color: #064556;
+            transition: transform 0.2s;
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section.dark {
+            background-color: #0c4b5c;
+            color: #fff;
+        }
+
+        .section img {
+            width: 450px;
+            height: 450px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #f8f8f8;
+            padding: 40px 20px;
+        }
+
+        .stats div {
+            font-size: 18px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding-bottom: 50px;
+        }
+
+        .course-card {
+            position: relative;
+            width: 500px;
+            border-radius: 20px;
+            overflow: visible;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+            flex: 1;
+        }
+
+        .course-card:hover {
+            transform: scale(1.02);
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 349.41px;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+        }
+
+        .floating-box {
+            height: 98px;
+            position: absolute;
+            bottom: -60px;
+            right: 20px;
+            left: 20px;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            padding-bottom: 0px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+            text-align: right;
+            z-index: 2;
+        }
+
+        .floating-box h3 {
+            font-family: 'Almarai', sans-serif;
+            margin: 0 0 10px;
+            font-size: 21px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .divider {
+            height: 2px;
+            background-color: #00bfa5;
+            margin-bottom: 10px;
+        }
+
+        .floating-box span {
+            font-family: 'Almarai', sans-serif;
+            margin: 0;
+            font-size: 16px;
+            color: #777;
+        }
+
+        footer {
+            background-color: #0c4b5c;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .socials img {
+            width: 30px;
+            margin: 0 10px;
+        }
+
+        #toTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+            background: #cddc39;
+            color: #000;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .split-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0px;
+        }
+
+        .split-section .text {
+            direction: rtl;
+            text-align: right;
+            flex: 1;
+            font-size: 20px;
+            padding: 10px;
+            margin: 30px;
+        }
+
+        div h2 {
+            padding-right: 50px;
+        }
+
+        .split-section .image {
+            flex: 1;
+            text-align: center;
+            min-width: 280px;
+        }
+
+        .split-section .image img {
+            display: flex;
+            justify-content: end;
+            padding-top: 20px;
+            padding-right: 20px;
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        .social-icons {
+
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .icon a {
+            color: inherit;
+            /* يضمن أن اللون يبقى كما هو */
+            text-decoration: none;
+            /* يمنع إضافة خط تحت الرابط */
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Colors from image */
+        .icon.tiktok {
+            background-color: #000000;
+        }
+
+        .icon.facebook {
+            background: radial-gradient(circle at center, #ffffff 45%, #3b5998 41%);
+            color: #3b5998;
+        }
+
+        .icon.youtube {
+            background-color: #ff4e4e;
+        }
+
+        .whatsapp i {
+    color: #25d366; /* اللون الأخضر الخاص بواتساب */
 }
 
-body {
-    font-family: 'Almarai', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #222;
-}
 
-header {
-    background: url('header-bg.png') no-repeat center/cover;
-    text-align: center;
-    padding: 80px 20px;
-}
+        .text h1 {
+            font-family: 'VIP Hala Bold', sans-serif;
+            font-size: 48px;
+            color: #303506;
 
-header h1 {
-    font-size: 32px;
-}
+        }
 
-header p {
-    font-size: 18px;
-    margin-top: 10px;
-}
+        #headline {
+            font-family: 'VIP Hala Bold', sans-serif;
+            font-size: 48px;
+            color: #C7CD8E;
 
-button, .buttons {
-    background-color: #cddc39;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-family: 'VIP Hala Bold', sans-serif;
-    font-size: 20px;
-    color: #064556;
-    border-radius: 5px;
-    transition: transform 0.2s, box-shadow 0.3s;
-}
 
-button:hover, .buttons:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-}
+        }
 
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
+        .buttons:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.5s;
+        }
 
-.section.dark {
-    background-color: #0c4b5c;
-    color: #fff;
-}
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.5s;
+        }
 
-.section img {
-    width: 450px;
-    height: 450px;
-}
+        .social-divider {
+            width: 500px;
+            /* أو أي نسبة/px حسب التصميم */
+            height: 5px;
+            background:
+                url('https://www.transparenttextures.com/patterns/asfalt-dark.png'),
+                linear-gradient(to right, #555454, #353535);
+            background-blend-mode: overlay;
+            margin: 20px auto;
+            border-radius: 2px;
+            margin: 20px auto;
+            /* مركزه تحت الأيقونات */
+            border-radius: 2px;
 
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    background-color: #f8f8f8;
-    padding: 40px 20px;
-}
+        }
 
-.stats div {
-    font-size: 18px;
-}
+        .qoute {
+            font-family: 'VIP Hala Bold', sans-serif;
+            font-size: 15px;
 
-.card-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding-bottom: 50px;
-    flex-wrap: wrap;
-}
+        }
 
-.course-card {
-    width: calc(33.33% - 20px);
-    position: relative;
-    border-radius: 20px;
-    overflow: visible;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s;
-    margin-bottom: 20px;
-}
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            transition: top 0.3s;
+            z-index: 1000;
+        }
 
-.course-card:hover {
-    transform: scale(1.02);
-}
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 32px;
+            margin: 0px 7px;
+            height: 80px;
 
-.course-card img {
-    width: 100%;
-    height: 349.41px;
-    object-fit: cover;
-    border-radius: 20px;
-    display: block;
-}
+        }
 
-.floating-box {
-    height: 98px;
-    position: absolute;
-    bottom: -60px;
-    right: 20px;
-    left: 20px;
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    padding-bottom: 0px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    text-align: right;
-    z-index: 2;
-}
+        .left-section,
+        .right-section {
+            display: flex;
+            align-items: center;
+        }
 
-.floating-box h3 {
-    font-family: 'Almarai', sans-serif;
-    margin: 0 0 10px;
-    font-size: 21px;
-    font-weight: bold;
-    color: #222;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 45px;
+        }
 
-.divider {
-    height: 2px;
-    background-color: #00bfa5;
-    margin-bottom: 10px;
-}
+        .logo img {
+            width: 163.5px;
+            height: 56px;
+            margin-left: 10px;
+        }
 
-.floating-box span {
-    font-family: 'Almarai', sans-serif;
-    margin: 0;
-    font-size: 16px;
-    color: #777;
-}
+        .right-section a {
+            text-decoration: none;
+            font-size: 14px;
+            margin-left: 15px;
+            color: #1e567a;
+        }
 
-footer {
-    background-color: #0c4b5c;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        /* محتوى وهمي للتمرير */
+        .content {
+            padding: 150px 20px;
+            height: 2000px;
+        }
 
-.socials img {
-    width: 30px;
-    margin: 0 10px;
-}
+        .main-text {
+            font-size: 24px;
+            color: #000;
+            margin-bottom: 8px;
+        }
 
-#toTop {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 999;
-    background: #cddc39;
-    color: #000;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        .highlighted-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #9BB40C;
+            margin: 8px;
+        }
 
-.split-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0px;
-}
 
-.split-section .text {
-    direction: rtl;
-    text-align: right;
-    flex: 1;
-    font-size: 20px;
-    padding: 10px;
-    margin: 30px;
-}
+        .secondary-text {
+            font-size: 24px;
+            color: #333;
+        }
 
-.split-section .image {
-    flex: 1;
-    text-align: center;
-    min-width: 280px;
-}
+        .line-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
 
-.split-section .image img {
-    display: flex;
-    justify-content: end;
-    padding-top: 20px;
-    padding-right: 20px;
-    max-width: 100%;
-    height: auto;
-}
+        }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 30px;
-}
+        .diamond-left,
+        .diamond-right {
+            width: 12px;
+            height: 12px;
+            transform: rotate(45deg);
+        }
 
-.icon a {
-    color: inherit;
-    text-decoration: none;
-}
+        .diamonds-left,
+        .diamonds-right {
+            width: 12px;
+            height: 12px;
+            transform: rotate(45deg);
+        }
 
-.icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    color: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
+        .diamond-left {
+            background-color: #004B5F;
+            margin-left: 0;
+        }
 
-.icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-}
+        .diamonds-left {
+            background-color: #004B5F;
+            margin-bottom: 20px;
+            margin-left: 0;
+        }
 
-.icon.tiktok {
-    background-color: #000000;
-}
+        .diamond-right {
+            background-color: #f1f8da;
 
-.icon.facebook {
-    background: radial-gradient(circle at center, #ffffff 45%, #3b5998 41%);
-    color: #3b5998;
-}
+            margin-right: 0;
+        }
 
-.icon.youtube {
-    background-color: #ff4e4e;
-}
+        .diamonds-right {
+            background-color: #f1f8da;
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
 
-.whatsapp i {
-    color: #25d366;
-}
+        .line {
+            width: 528px;
+            height: 3px;
 
-.text h1 {
-    font-family: 'VIP Hala Bold', sans-serif;
-    font-size: 48px;
-    color: #303506;
-}
+            background: linear-gradient(to Right, #004B5F 0%, #C2D83B 60%);
+        }
 
-#headline {
-    font-family: 'VIP Hala Bold', sans-serif;
-    font-size: 48px;
-    color: #C7CD8E;
-}
+        .lines {
+            width: 528px;
+            height: 3px;
+            margin-bottom: 20px;
+            background: #004B5F;
+        }
 
-/* استعلامات الوسائط */
-@media (min-width: 768px) {
-    .course-card {
-        width: calc(45% - 20px);
-    }
+        .buttons-book {
+            padding: 10px 15px;
+            gap: 15px;
+            background-color: white;
+            outline: 3px #0c4b5c solid;
+            outline-offset: -3px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: 400ms;
 
-    .card-container {
-        justify-content: center;
-    }
-}
+            font-weight: bold;
+            font-family: 'VIP Hala Bold', sans-serif;
+            font-size: 20px;
 
-@media (min-width: 1024px) {
-    .course-card {
-        width: 30%;
-    }
-}
 
-@media (max-width: 1024px) and (orientation: landscape) {
-    header {
-        padding: 80px 20px 60px;
-    }
 
-    .split-section {
-        flex-direction: row;
-        gap: 15px;
-    }
+        }
 
-    .split-section .text, 
-    .split-section .image {
-        flex: 1;
-        min-width: 45%;
-    }
+        .buttons-book.text {
+            color: white;
+            font-weight: 700;
+            font-size: 1em;
+            transition: 400ms;
+        }
 
-    .text h1, #headline {
-        font-size: 32px !important;
-    }
 
-    .course-card {
-        width: 48%;
-        margin-bottom: 70px;
-    }
 
-    .buttons, .button, .buttons-book {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
+        .buttons-book:hover {
+            background-color: #0c4b5c;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.5s;
 
-    .navbar-content {
-        height: 60px;
-        padding: 0 15px;
-    }
+        }
 
-    .logo img {
-        width: 120px;
-        height: 40px;
-    }
-}
-
-@media (max-width: 767px) {
-    .course-card {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .card-container {
-        flex-direction: column;
-    }
-}
 
 
 
