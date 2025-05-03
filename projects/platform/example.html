@@ -506,8 +506,54 @@
             transition: transform 0.5s;
 
         }
+/* Media Query for Tablets in Landscape Mode */
+@media (max-width: 1024px) and (orientation: landscape) {
+  body {
+    font-size: 14px; /* تقليل حجم الخط */
+    padding: 10px; /* إضافة بعض الفراغات */
+  }
 
+  .container {
+    max-width: 90%; /* توسيع المساحة الداخلية */
+    margin: 0 auto; /* توسيط المحتوى */
+  }
 
+  header, footer {
+    padding: 10px 0; /* تقليل المسافة بين عناصر الـheader والـfooter */
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* عرض الأعمدة بشكل متجاور */
+    gap: 10px; /* إضافة فراغ بين الأعمدة */
+  }
+
+  .sidebar {
+    display: none; /* إخفاء الـsidebar في الوضع الأفقي */
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 20px; /* زيادة المساحة داخل المحتوى الرئيسي */
+  }
+}
+
+/* Adjust for larger screens (like desktops) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 16px;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة على الشاشات الكبيرة */
+  }
+}
 
 
     </style>
