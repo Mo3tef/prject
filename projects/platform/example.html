@@ -680,6 +680,77 @@
         max-width: calc(25% - 40px);
       }
     }
+        /* تحسينات خاصة بوضع التابلت أفقي */
+@media (max-width: 1024px) and (orientation: landscape) {
+    header {
+        padding: 80px 20px 60px;
+    }
+
+    .navbar-content {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .logo img {
+        width: 120px;
+        height: 40px;
+    }
+
+    .split-section {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .split-section .text,
+    .split-section .image {
+        flex: 1;
+        min-width: 45%;
+    }
+
+    .text h1, #headline {
+        font-size: 32px !important;
+    }
+
+    .course-card {
+        width: 48%;
+        margin-bottom: 70px;
+    }
+
+    .buttons, .button, .buttons-book {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .course-card {
+        width: 48%;
+        margin-bottom: 60px;
+    }
+
+    .buttons-book {
+        padding: 10px 15px;
+    }
+
+    .social-divider {
+        width: 500px;
+        height: 5px;
+        margin: 20px auto;
+    }
+
+    .split-section .text {
+        font-size: 18px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+}
+
 
     </style>
 </head>
