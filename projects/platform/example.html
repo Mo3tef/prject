@@ -657,13 +657,29 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* استجابة للتابلت الأفقي */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .course-card {
-        flex: 1 1 calc(33.333% - 40px); /* 3 كروت في الصف مع فجوات */
-        max-width: none;
+/* تابلت أفقي: 3 كروت في الصف */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .course-card {
+        flex: 1 1 calc(33.333% - 40px);
+        max-width: calc(33.333% - 40px);
+      }
     }
-}
+
+    /* شاشة موبايل: كارت واحد في الصف */
+    @media (max-width: 767px) {
+      .course-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+
+    /* شاشات كبيرة: 3 أو 4 كروت حسب العرض */
+    @media (min-width: 1025px) {
+      .course-card {
+        flex: 1 1 calc(25% - 40px);
+        max-width: calc(25% - 40px);
+      }
+    }
 
     </style>
 </head>
