@@ -506,72 +506,95 @@
             transition: transform 0.5s;
 
         }
+        
+        @media (min-width: 768px) {
+            .navbar-content {
+                padding: 0px 32px;
+            }
+            
+            .split-section {
+                flex-direction: row;
+            }
+            
+            .card-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .course-card {
+                width: 45%;
+                margin-bottom: 100px;
+            }
+        }
 
+        /* استعلامات الوسائط للشاشات الكبيرة */
+        @media (min-width: 1024px) {
+            .course-card {
+                width: 30%;
+            }
+            
+            .split-section .text {
+                font-size: 20px;
+            }
+        }
 
+        /* تعديلات خاصة بوضع الأفقي (Landscape) على الأجهزة المحمولة */
+        @media (max-width: 1024px) and (orientation: landscape) {
+            header {
+                padding: 80px 20px 60px;
+            }
+            
+            .split-section {
+                flex-direction: row;
+                gap: 15px;
+            }
+            
+            .split-section .text, 
+            .split-section .image {
+                flex: 1;
+                min-width: 45%;
+            }
+            
+            .text h1, #headline {
+                font-size: 32px !important;
+            }
+            
+            .course-card {
+                width: 48%;
+                margin-bottom: 70px;
+            }
+            
+            .buttons, .button, .buttons-book {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+            
+            .navbar-content {
+                height: 60px;
+                padding: 0 15px;
+            }
+            
+            .logo img {
+                width: 120px;
+                height: 40px;
+            }
+        }
 
-
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    /* أي تعديلات خاصة بالتابلت فقط */
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .course-card {
-        width: 90%;
-        max-width: 600px;
-    }
-
-    .split-section {
-        flex-direction: column;
-    }
-
-    .split-section .text,
-    .split-section .image {
-        width: 100%;
-        margin: 0;
-    }
-
-    .floating-box {
-        left: 10px;
-        right: 10px;
-    }
-
-    header {
-        padding: 50px 10px;
-    }
-
-    .navbar-content {
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
-    }
-
-    .right-section a {
-        margin-left: 5px;
-        font-size: 12px;
-    }
-
-    .logo img {
-        width: 120px;
-        height: auto;
-    }
-
-    #headline {
-        font-size: 36px;
-    }
-
-    .text h1 {
-        font-size: 36px;
-    }
-
-    .buttons,
-    .button,
-    .buttons-book {
-        font-size: 18px;
-        padding: 8px 16px;
-    }
-}
+        @media (max-width: 768px) and (orientation: landscape) {
+            header h1 span {
+                font-size: 28px !important;
+            }
+            
+            .course-card {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .card-container {
+                flex-direction: column;
+            }
+        }
 
     </style>
 </head>
