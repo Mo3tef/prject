@@ -750,6 +750,27 @@
         gap: 15px;
     }
 }
+    .card {
+    width: 250px; /* حددنا عرض الكرت */
+    height: 350px; /* حددنا ارتفاع الكرت */
+    margin: 15px; /* المسافة بين الكروت */
+    background-color: #ffffff; /* خلفية الكرت */
+    border-radius: 8px; /* زوايا دائرية للكرت */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل للكرت */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير الانتقال */
+    overflow: hidden; /* لتجنب ظهور أجزاء غير مرغوب فيها من المحتوى */
+}
+
+    .card:hover {
+    transform: translateY(-5px); /* عند التمرير فوق الكرت يتحرك للأعلى */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* تأثير ظل أقوى عند التمرير */
+    }
+    .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    }
 
 
     </style>
