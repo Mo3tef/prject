@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KidCalc</title>
+  <!-- Link to external stylesheet for initial design -->
+  <link id="themeStylesheet" rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <!-- Navbar with links to different sections of the website -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="">
+        <img src="./assets/images/snapedit_1740495261853-removebg-preview.png" alt="logo">
+      </a>
+    </div>
+    <ul>
+      <li><a class="links" href="">Home</a></li>
+      <li><a class="links" href="">About</a></li>
+      <li><a class="links" href="">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content container -->
+  <main class="container">
+    <h1>Welcome to KidCalc</h1>
+    
+    <!-- Login section where users enter their name, age, and choose a theme -->
+    <section class="section">
+      <h2>Login</h2>
+      <label>Name</label>
+      <input type="text" id="userNameInput">
+      <label>Age</label>
+      <input type="number" id="userAgeInput">
+      <label>Theme</label>
+      <!-- Dropdown for theme selection -->
+      <select id="themeSelector">
+        <option value="candyland">Candy Land</option>
+        <option value="jungle">Jungle</option>
+        <option value="space">Space</option>
+      </select>
+      <div class="buttons-container">
+        <button class="button3" id="submitBtn">Submit</button>
+        <button class="button2" onclick="clearLoginData()"> 
+          <svg viewBox="0 0 448 512" class="svgIcon">
+            <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path>
+          </svg>
+        </button>
+      </div>  
+    </section>
+
+    <!-- Info bar to display welcome message and problems solved count -->
+    <section class="section">
+      <div class="infoBar" id="infoBar">
+        Welcome! Enter your details to get started.
+        <br>
+        <span id="correctAnswersCount">Problems solved correctly: 0</span>
+      </div>
+    </section>
+
+    <!-- Section for mathematical operations (number buttons and operators) -->
+    <section class="section">
+      <div class="math-box">
+        <!-- Numbers section -->
+        <div class="math-section">
+          <h4>Numbers</h4>
+          <div class="buttons">
+            <!-- Buttons for digits 0-9 -->
+            <button class="button1" onclick="appendToAnswerBox('0')">0</button>
+            <button class="button1" onclick="appendToAnswerBox('1')">1</button>
+            <button class="button1" onclick="appendToAnswerBox('2')">2</button>
+            <button class="button1" onclick="appendToAnswerBox('3')">3</button>
+            <button class="button1" onclick="appendToAnswerBox('4')">4</button>
+            <button class="button1" onclick="appendToAnswerBox('5')">5</button>
+            <button class="button1" onclick="appendToAnswerBox('6')">6</button>
+            <button class="button1" onclick="appendToAnswerBox('7')">7</button>
+            <button class="button1" onclick="appendToAnswerBox('8')">8</button>
+            <button class="button1" onclick="appendToAnswerBox('9')">9</button>
+          </div>
+        </div>
+        
+        <!-- Operators section -->
+        <div class="math-section">
+          <h4>Operators</h4>
+          <div class="buttons">
+            <!-- Buttons for mathematical operators like +, -, *, / -->
+            <button class="button1" onclick="appendToAnswerBox('+')" title="Add">+</button>
+            <button class="button1" onclick="appendToAnswerBox('-')" title="Subtract">-</button>
+            <button class="button1" onclick="appendToAnswerBox('*')" title="Multiply">*</button>
+            <button class="button1" onclick="appendToAnswerBox('/')" title="Divide">/</button>
+            <button class="button1" onclick="appendToAnswerBox('<')" title="Less than">&lt;</button>
+            <button class="button1" onclick="appendToAnswerBox('>')" title="Greater than">&gt;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Answer box and buttons for submitting or clearing the answer -->
+      <div class="answer-box-container">
+        <label>Answer Box</label>
+        <input type="text" id="answerBox" readonly>
+        <div class="buttons-container">
+          <!-- Submit button for calculating the result -->
+          <button class="button3" onclick="calculateResult()">Submit</button>
+          <!-- Clear button to clear the answer box -->
+          <button class="button2" onclick="clearAnswerBox()"> 
+            <svg viewBox="0 0 448 512" class="svgIcon">
+              <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer section with copyright notice -->
+  <div class="Footer">
+    <p>Copyright © 2010 by Mostafa Atef</p>
+  </div>
+   
+  
+ <!-- this part is optional -->
+  <!-- JavaScript code to handle the logic of the app -->
+  <script>
+    let correctAnswersCount = 0; // Variable to keep track of correct answers
+    let previousInfoBarContent = ""; // To store previous content of the info bar
+
+    // Event listener for the submit button, handles username and theme change
+    document.getElementById("submitBtn").addEventListener("click", function () {
+      let userName = document.getElementById("userNameInput").value.trim();
+      let infoBar = document.getElementById("infoBar");
+
+      // Check if the user has entered a name
+      if (userName !== "") {
+        infoBar.innerHTML = `Hello, <b>${userName}</b>! Welcome to KidCalc!<br>
+        <span id="correctAnswersCount">Problems solved correctly: ${correctAnswersCount}</span>`;
+        previousInfoBarContent = infoBar.innerHTML;
+
+        // Change theme based on the selected option
+        var selectedTheme = document.getElementById("themeSelector").value;
+        var themeStylesheet = document.getElementById("themeStylesheet");
+
+        if (selectedTheme === "candyland") {
+          themeStylesheet.href = "./assets/theme1.css";
+        } else if (selectedTheme === "jungle") {
+          themeStylesheet.href = "./assets/theme2.css";
+        } else if (selectedTheme === "space") {
+          themeStylesheet.href = "./assets/theme3.css";
+        }
+      } else {
+        infoBar.innerHTML = "Please enter your name."; // Error message if no name is entered
+      }
+    });
+
+    // Function to add a value (number or operator) to the answer box
+    function appendToAnswerBox(value) {
+      document.getElementById("answerBox").value += value;
+      document.getElementById("infoBar").innerHTML = previousInfoBarContent;
+    }
+
+    // Submit function to evaluate the expression in the answer box
+    function calculateResult() {
+      let infoBar = document.getElementById("infoBar");
+
+      try {
+        let expression = document.getElementById("answerBox").value;
+
+        // Check if the expression contains only valid characters
+        if (/^[\d+\-*/. <>=]+$/.test(expression)) {
+          let result = eval(expression); // Evaluate the expression
+          document.getElementById("answerBox").value = result;
+
+          correctAnswersCount++; // Increment the correct answers count
+          document.getElementById("correctAnswersCount").innerText = `Problems solved correctly: ${correctAnswersCount}`;
+
+          previousInfoBarContent = infoBar.innerHTML;
+        } else {
+          infoBar.innerHTML = "Invalid Calculation. Please try again."; // Error message for invalid input
+        }
+      } catch (e) {
+        infoBar.innerText = "Invalid input. Please try again."; // Error handling for invalid expressions
+      }
+    }
+
+    // Function to clear the answer box and reset the info bar
+    function clearAnswerBox() {
+      let infoBar = document.getElementById("infoBar");
+      document.getElementById("answerBox").value = ""; // Clear the answer box
+      infoBar.innerHTML = "Answer cleared! Please try again."; // Reset the info bar message
+    }
+    
+    function clearLoginData() {
+    document.getElementById("userNameInput").value = ""; // Clear name input
+    document.getElementById("userAgeInput").value = ""; // Clear age input
+    document.getElementById("themeSelector").selectedIndex = 0; // Reset theme selection
+    document.getElementById("infoBar").innerHTML = "Login data cleared! Enter your details again.";
+  }
+  </script>
+</body>
+</html>

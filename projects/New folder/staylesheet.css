@@ -1,0 +1,168 @@
+body{
+padding: 0px;
+margin: 0px;
+}
+
+ header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    
+ }
+
+
+a {
+    text-decoration: none;
+    color: #00ff;
+    
+    
+    
+
+}
+
+
+ul li {
+    width: 100px;
+     display: inline-block;
+     
+    
+
+
+
+    
+     
+
+     
+     
+ 
+     
+ }
+
+ nav ul li :hover{
+    color: rgb(55, 98, 179);
+
+ }
+
+
+ #title {
+     color: darkgreen;
+ }
+
+
+ .featured {
+     font-style: italic;
+     font-weight: bold;
+     color: rgb(20, 100, 220);
+ }
+
+
+ article .highlighted {
+     font-weight: bold;
+     font-style: italic;
+     color: blue;
+ }
+
+
+ aside ul li a {
+     text-decoration: none;
+ }
+
+
+ body {
+     font-family: Verdana, sans-serif;
+     color: aliceblue;
+     background-color: black;
+
+ }
+
+ #btn {
+     padding: 10px 20px;
+     text-transform: uppercase;
+     border-radius: 8px;
+     font-size: 17px;
+     font-weight: 500;
+     color: #ffffff80;
+     background: transparent;
+     cursor: pointer;
+     border: 2px solid #ffffff80;
+     transition: all 0.3s ease-in-out;
+ }
+
+ #btn:hover {
+     color: #fff;
+     background: #008cff;
+     border-color: #008cff;
+     box-shadow: 0 0 10px #008cff;
+ }
+
+ /* 🔴 تصميم الزر الجديد (Delete) */
+ .button {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     background-color: rgb(0, 0, 0);
+     border: #ffffff80;
+     color: #ffffff80;
+     font-weight: 600;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+     cursor: pointer;
+     transition-duration: .3s;
+     overflow: hidden;
+     position: relative;
+ }
+
+ .svgIcon {
+     width: 12px;
+     transition-duration: .3s;
+ }
+
+ .svgIcon path {
+     fill: rgb(255, 255, 255);
+ }
+
+ .button:hover {
+     width: 140px;
+     border-radius: 50px;
+     transition-duration: .3s;
+     background-color: #008cff;
+     ;
+
+     align-items: center;
+ }
+
+ .button:hover .svgIcon {
+     width: 50px;
+     transition-duration: .3s;
+     transform: translateY(60%);
+
+ }
+
+ .button::before {
+     position: absolute;
+     top: -20px;
+     content: "rest";
+     color: white;
+     transition-duration: .3s;
+     font-size: 2px;
+ }
+
+ .button:hover::before {
+     font-size: 13px;
+     opacity: 1;
+     transform: translateY(30px);
+     transition-duration: .3s;
+ }
+
+ /* ⭐ وضع الزرين بجانب بعض */
+ .button-container {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     /* المسافة بين الزرين */
+ }

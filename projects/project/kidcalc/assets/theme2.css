@@ -1,0 +1,516 @@
+body {
+    width: 100%;
+    /* Ensures the body spans the entire width of the viewport */
+    overflow-x: clip;
+    /* Prevents horizontal scrolling */
+    margin: 0;
+    /* Removes any default margin */
+    padding: 0;
+    /* Removes any default padding */
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the element's total width and height */
+    background-image: url('./images/DALL·E\ 2025-02-26\ 00.50.09\ -\ A\ seamless\ cartoon-style\ forest-themed\ background\ for\ a\ children\'s\ calculator\ website.\ The\ background\ features\ playful\,\ colorful\ leaves\ and\ trees\ with.webp');
+    /* Set a playful, forest-themed background image for the page */
+    background-size: cover;
+    /* Ensures the background image covers the entire viewport */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Ensures the background image does not repeat */
+    background-attachment: fixed;
+    /* Keeps the background image fixed when scrolling */
+    height: 100vh;
+    /* Makes the body fill the full height of the viewport */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Sets the font family */
+    text-align: center;
+    /* Centers the text */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: rgba(139, 69, 19, 0.8);
+    display: flex;
+    /* Flexbox layout for navbar */
+    justify-content: space-between;
+    /* Space between items */
+    align-items: center;
+    /* Center items vertically */
+    padding: 10px 20px;
+    /* Padding inside navbar */
+    width: 100%;
+    /* Full width */
+    position: fixed;
+    /* Fix navbar to the top */
+    top: 0;
+    /* Align to top */
+    left: 0;
+    /* Align to left */
+    z-index: 1000;
+    /* Make navbar appear above other elements */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width/height */
+}
+
+/* Navbar list styling */
+.navbar ul {
+    list-style: none;
+    /* Remove bullet points */
+    display: flex;
+    /* Flexbox layout for navbar items */
+    gap: 30px;
+    /* Space between items */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+/* Navbar links styling */
+.navbar ul li a {
+    text-decoration: none;
+    /* Remove underline */
+    color: #f4f1de;
+    /* Set text color to white */
+    font-weight: bold;
+    /* Make text bold */
+}
+
+
+/* Link styling with hover effect */
+.links {
+    color: #000;
+    /* Set text color */
+    padding: 5px 10px;
+    /* Padding around the link */
+    border-radius: 5px;
+    /* Rounded corners */
+    text-decoration: none;
+    /* Remove underline */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition for hover effects */
+    font-family: 'Courier New', Courier, monospace;
+    /* Set font */
+    font-weight: bold;
+    /* Bold text */
+}
+
+.links:hover {
+    background: #228B22;
+    /* Background color on hover */
+    font-size: larger;
+    /* Increase font size on hover */
+    color: white;
+    /* Set text color to white on hover */
+}
+
+/* Logo image styling */
+.logo img {
+    width: 45px;
+    /* Set width of logo */
+    height: 45px;
+    /* Set height of logo */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    transition: all 0.5s;
+    /* Smooth transition for hover effect */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+.logo img:hover {
+    transform: scale(1.4);
+    /* Scale up logo on hover */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: center;
+    /* Center the elements horizontally */
+    gap: 20px;
+    /* Space between elements */
+    width: 100%;
+    /* Full width of the viewport */
+    max-width: 600px;
+    /* Limit the width to 600px */
+    margin: 100px auto 0;
+    /* Center the container vertically with a 100px margin on top */
+    min-height: 100vh;
+    /* Ensure the container fills at least the full height of the viewport */
+    padding-bottom: 50px;
+    /* Add padding at the bottom */
+}
+
+.section {
+    width: 120%;
+    /* Make the section slightly wider than the container */
+    background: rgba(34, 139, 34, 0.85);
+    /* Apply a transparent green background */
+    /* أخضر نباتي شفاف */
+    padding: 20px;
+    /* Add padding inside the section */
+    border-radius: 10px;
+    /* Rounded corners */
+    color: white;
+    /* White text */
+}
+
+input {
+    width: 95%;
+    /* Make the input field take up most of the container's width */
+    padding: 10px;
+    /* Add padding inside the input */
+    margin: 10px 0;
+    /* Add vertical margin between inputs */
+    border: none;
+    /* Remove the border */
+    border-radius: 5px;
+    /* Rounded corners for the input */
+}
+
+select {
+    width: 98%;
+    /* Make the select element almost as wide as the container */
+    padding: 10px;
+    /* Add padding inside the select box */
+    margin: 10px 0;
+    /* Add vertical margin between inputs */
+    border: none;
+    /* Remove the border */
+    border-radius: 5px;
+    /* Rounded corners for the select box */
+}
+
+.button1 {
+    background-image: linear-gradient(to bottom right, #8B4513, #A0522D);
+    /* Apply a gradient background */
+    padding: 1.3em 3em;
+    /* Add padding to the button */
+    font-size: 15px;
+    /* Set the font size */
+    text-transform: uppercase;
+    /* Convert text to uppercase */
+    letter-spacing: 2.5px;
+    /* Space out the letters */
+    font-weight: 500;
+    /* Set the font weight */
+    color: #000;
+    /* Set text color to black */
+    background-color: #fff;
+    /* Set background color to white */
+    border: none;
+    /* Remove border */
+    border-radius: 45px;
+    /* Apply rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /* Apply shadow for a 3D effect */
+    transition: all 0.3s ease 0s;
+    /* Smooth transition for all properties */
+    cursor: pointer;
+    /* Change cursor to pointer when hovering */
+    outline: none;
+    /* Remove outline */
+}
+
+.button1:hover {
+    box-shadow: 0px 15px 20px #9fbdc4;
+    /* Add a shadow when hovering */
+    color: #fff;
+    /* Change text color to white */
+    transform: translateY(-7px)
+        /* Move button up when hovering */
+}
+
+.button1:active {
+    transform: translateY(-1px);
+    /* Slightly move button when clicked */
+}
+
+.button3 {
+    background-image: linear-gradient(to bottom right, #228B22, #6B8E23);
+    /* Apply a green gradient */
+    /* درجات الأخضر */
+    padding: 1.3em 3em;
+    /* Add padding to the button */
+    font-size: 15px;
+    /* Set the font size */
+    text-transform: uppercase;
+    /* Convert text to uppercase */
+    letter-spacing: 2.5px;
+    /* Space out the letters */
+    font-weight: 500;
+    /* Set the font weight */
+    color: #000;
+    /* Set text color to black */
+    background-color: #fff;
+    /* Set background color to white */
+    border: none;
+    /* Remove border */
+    border-radius: 45px;
+    /* Apply rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /* Apply shadow for a 3D effect */
+    transition: all 0.3s ease 0s;
+    /* Smooth transition for all properties */
+    cursor: pointer;
+    /* Change cursor to pointer when hovering */
+    outline: none;
+    /* Remove outline */
+}
+
+.button3:hover {
+    color: #fff;
+    /* Change text color to white when hovering */
+    transform: translateY(-7px);
+    /* Move button up when hovering */
+    background-color: #9da190;
+    /* Change background color to light green */
+    box-shadow: 0px 15px 20px rgba(166, 175, 33, 0.4);
+    /* Add shadow when hovering */
+}
+
+.button3:active {
+    transform: translateY(-1px);
+    /* Slightly move button when clicked */
+}
+
+.button2 {
+    width: 150px;
+    /* Set width of the button */
+    height: 58px;
+    /* Set height of the button */
+    border-radius: 45px;
+    /* Apply rounded corners */
+    background-color: rgb(20, 20, 20);
+    /* Set a dark background color */
+    border: none;
+    /* Remove border */
+    font-weight: 600;
+    /* Set the font weight */
+    display: flex;
+    /* Use flexbox to align content */
+    align-items: center;
+    /* Center the content vertically */
+    justify-content: center;
+    /* Center the content horizontally */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    /* Add shadow for a 3D effect */
+    cursor: pointer;
+    /* Change cursor to pointer when hovering */
+    transition-duration: .3s;
+    /* Smooth transition */
+    overflow: hidden;
+    /* Prevent overflow of content */
+    position: relative;
+    /* Set position relative for pseudo-element */
+}
+
+.svgIcon {
+    width: 12px;
+    /* Set the width of the icon */
+    transition-duration: .3s;
+    /* Smooth transition */
+}
+
+.svgIcon path {
+    fill: white;
+    /* Set the icon's color to white */
+}
+
+.button2:hover {
+    width: 140px;
+    /* Reduce width on hover */
+    border-radius: 50px;
+    /* Change the border radius to create a circular effect */
+    transition-duration: .3s;
+    /* Smooth transition */
+    background-color: rgb(255, 69, 69);
+    /* Change background color to red on hover */
+    align-items: center;
+    /* Center the icon */
+}
+
+.button2:hover .svgIcon {
+    width: 50px;
+    /* Increase the icon's width on hover */
+    transition-duration: .3s;
+    /* Smooth transition */
+    transform: translateY(60%);
+    /* Move the icon downwards */
+}
+
+.button2::before {
+    position: absolute;
+    /* Position the "Delete" text absolutely */
+    top: -20px;
+    /* Position above the button */
+    content: "Delete";
+    /* Text content */
+    color: white;
+    /* White text */
+    transition-duration: .3s;
+    /* Smooth transition */
+    font-size: 12px;
+    /* Set the font size */
+}
+
+.button2:hover::before {
+    font-size: 15px;
+    /* Increase font size on hover */
+    opacity: 1;
+    /* Make text fully visible */
+    transform: translateY(30px);
+    /* Move the text downwards */
+    transition-duration: .3s;
+    /* Smooth transition */
+}
+
+.button2:active {
+    transform: translateY(-8px);
+    /* Slightly move button down when clicked */
+}
+
+.math-box {
+    display: grid;
+    /* Use grid layout for the math buttons */
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns for the grid */
+    gap: 15px;
+    /* Add space between items */
+}
+
+.math-section {
+    background: rgba(255, 255, 255, 0.3);
+    /* Apply a semi-transparent white background */
+    padding: 15px;
+    /* Add padding inside the section */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+.buttons {
+    display: grid;
+    /* Use grid layout for buttons */
+    grid-template-columns: repeat(3, 1fr);
+    /* Three columns for the grid */
+    gap: 10px;
+    /* Add space between items */
+}
+
+.answer-box-container {
+    display: flex;
+    /* Use flexbox for aligning elements */
+    flex-direction: column;
+    /* Stack elements vertically */
+    /* الإدخال فوق الأزرار */
+    align-items: center;
+    /* Center the elements horizontally */
+    gap: 10px;
+    /* Space between elements */
+    margin-top: 10px;
+    /* Add space above the container */
+}
+
+.buttons-container {
+    display: flex;
+    /* Use flexbox to align buttons */
+    justify-content: center;
+    /* Center the buttons horizontally */
+    /* توسيط الأزرار */
+    align-items: center;
+    /* Center the buttons vertically */
+    gap: 15px;
+    /* Space between buttons */
+    /* مسافة بين الزرارين */
+}
+
+.infoBar {
+    background: rgba(255, 255, 255, 0.3);
+    /* Apply a semi-transparent white background */
+    padding: 15px;
+    /* Add padding inside the bar */
+    border-radius: 5px;
+    /* Rounded corners */
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    /* Add a border with slight transparency */
+    margin-bottom: 10px;
+    /* Add space below the bar */
+}
+
+footer {
+    text-align: center;
+    /* Center the footer text */
+    padding: 15px;
+    /* Add padding inside the footer */
+    background: #333;
+    /* Set a dark background for the footer */
+    color: white;
+    /* Set text color to white */
+    margin-top: 20px;
+    /* Add space above the footer */
+    position: relative;
+    /* Position footer relative to the page */
+    width: 100%;
+    /* Make the footer span the entire width */
+}
+
+/* Responsive Design for tablets and below */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        /* Reduce width of container */
+        margin-top: 40px;
+        /* Adjust margin on top */
+    }
+
+    .button1,
+    .button3 {
+        font-size: 12px;
+        /* Smaller font size */
+        padding: 1em 1.5em;
+        /* Reduced padding */
+    }
+
+    .button2 {
+        font-size: 12px;
+        /* Smaller font size */
+        width: 100px;
+        /* Reduce width */
+        height: 38px;
+        /* Reduce height */
+    }
+}
+
+/* Responsive Design for mobile devices */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        /* Full width */
+        padding: 10px;
+        /* Padding inside container */
+    }
+
+    .math-box {
+        grid-template-columns: 1fr;
+        /* Single column grid */
+    }
+
+    .button1,
+    .button3 {
+        font-size: 12px;
+        /* Smaller font size */
+        padding: 1em;
+        /* Reduced padding */
+    }
+
+    .button2 {
+        font-size: 12px;
+        /* Smaller font size */
+        width: 100px;
+        /* Reduce width */
+        height: 38px;
+        /* Reduce height */
+    }
+}

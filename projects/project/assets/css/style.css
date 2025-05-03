@@ -1,0 +1,5 @@
+/* Import the main stylesheet for the homepage */
+@import url('home.css');
+
+/* Import the stylesheet for individual posts */
+@import url('post.css');
