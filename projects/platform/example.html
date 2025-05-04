@@ -550,15 +550,12 @@
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
         transition: transform 0.5s;
       }
-      @media (max-width: 1500px) {
+      @media (max-width: 768px) {
         .card-container {
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap; /* يمنع الانتقال لصف جديد */
     gap: 15px; /* تقليل المسافة بين الكروت */
-    padding: 20px 10px; /* تعديل الحشو */
-    overflow-x: auto; /* يسمح بالتمرير الأفقي إذا لم تتسع الشاشة */
-    scrollbar-width: thin; /* لجعل شريط التمرير أنحف (يدعمه Firefox) */
+    padding: 20px 10px; 
     -webkit-overflow-scrolling: touch; /* لسلاسة التمرير على الموبايل */
     width: 100%;
 }
