@@ -551,51 +551,98 @@
         transition: transform 0.5s;
       }
       @media (max-width: 768px) {
-.card-container {
+              .card-container {
+    display: grid;
+    grid-auto-flow: column; /* صف أفقي دائم */
+    grid-auto-columns: minmax(300px, 1fr); /* حد أدنى 300px مع تمدد إذا توفر المساحة */
+    gap: 25px;
+    padding: 30px;
+    overflow-x: auto;
+}
+
+.course-card {
+    width: 100%; /* سيشغل المساحة المحددة في grid */
+    min-width: 0; /* يسمح بالضغط عند الحاجة */
+}
+/* .card-container {
     display: flex;
-    flex-wrap: nowrap; /* يمنع الانتقال لسطر جديد */
+    flex-wrap: nowrap; 
     gap: 20px;
-    padding: 30px; /* زيادة الحشو حول الكروت */
-    overflow-x: auto; /* يسمح بالتمرير الأفقي إذا لزم الأمر */
+    padding: 30px; 
+    overflow-x: auto; 
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
     width: 100%;
 }
 
 .course-card {
-    width: 320px; /* زيادة عرض الكارت */
-    min-width: 320px; /* منع التقلص */
-    border-radius: 24px; /* زوايا أكثر استدارة */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* ظل أعمق */
+    width: 320px; 
+    min-width: 320px;
+    border-radius: 24px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex-shrink: 0;
     margin: 0;
 }
 
 .course-card:hover {
-    transform: scale(1.03); /* تأثير تكبير عند التحويم */
+    transform: scale(1.03); 
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .course-card img {
-    min-height: 220px; /* زيادة ارتفاع الصورة */
+    min-height: 220px; 
     border-radius: 24px 24px 0 0;
 }
 
 .floating-box {
-    min-height: 100px; /* زيادة ارتفاع الصندوق العائم */
+    min-height: 100px; 
     padding: 15px;
-    bottom: -70px; /* تعديل موقعه ليتناسب مع الحجم الجديد */
+    bottom: -70px; 
 }
 
 .floating-box h3 {
-    font-size: 22px; /* زيادة حجم النص */
+    font-size: 22px; 
 }
 
 .floating-box span {
     font-size: 16px;
+} */
+/* ------------------------------------------------------------------------------- */
+        @media (min-width: 1200px) {
+    .card-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-x: visible;
+    }
+    .course-card {
+        width: calc(25% - 20px); /* 4 كروت في الصف */
+        min-width: auto;
+    }
 }
-      
+/* ------------------------------------------------------------------------------- */
+        .card-container {
+    display: grid;
+    grid-auto-flow: column; /* صف أفقي دائم */
+    grid-auto-columns: minmax(300px, 1fr); /* حد أدنى 300px مع تمدد إذا توفر المساحة */
+    gap: 25px;
+    padding: 30px;
+    overflow-x: auto;
+}
+
+.course-card {
+    width: 100%; /* سيشغل المساحة المحددة في grid */
+    min-width: 0; /* يسمح بالضغط عند الحاجة */
+}
+/* ------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+        
       /* Mobile devices */
       @media (max-width: 767px) {
         header {
