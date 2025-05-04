@@ -552,50 +552,52 @@
       }
       @media (max-width: 768px) {
         .card-container {
-          display: flex;
-          flex-wrap: nowrap;
-          gap: 20px;
-          padding: 30px;
-          overflow-x: auto;
-          scrollbar-width: thin;
-          -webkit-overflow-scrolling: touch;
-          width: 100%;
-        }
+    display: flex;
+    justify-content: flex-start; /* بدلاً من center لتجنب فراغات غير مرغوبة */
+    flex-wrap: nowrap; /* يمنع الانتقال لصف جديد */
+    gap: 15px; /* تقليل المسافة بين الكروت */
+    padding: 20px 10px; /* تعديل الحشو */
+    overflow-x: auto; /* يسمح بالتمرير الأفقي إذا لم تتسع الشاشة */
+    scrollbar-width: thin; /* لجعل شريط التمرير أنحف (يدعمه Firefox) */
+    -webkit-overflow-scrolling: touch; /* لسلاسة التمرير على الموبايل */
+    width: 100%;
+}
 
-        .course-card {
-          width: 320px;
-          min-width: 320px;
-          border-radius: 24px;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          flex-shrink: 0;
-          margin: 0;
-        }
+.course-card {
+    position: relative;
+    width: 250px; /* تصغير حجم الكرت (يمكن استخدام 30vw للتكيف مع الشاشة) */
+    min-width: 250px; /* يمنع تقلص الكرت */
+    border-radius: 20px;
+    overflow: visible;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* تخفيف الظل */
+    transition: transform 0.3s;
+    flex-shrink: 0; /* يمنع الكرت من الضغط عند التمرير */
+    margin: 0; /* إزالة أي هوامش خارجية */
+}
 
-        .course-card:hover {
-          transform: scale(1.03);
-          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-        }
+.course-card img {
+    width: 100%;
+    height: auto;
+    min-height: 180px; /* تصغير ارتفاع الصورة */
+    object-fit: cover;
+    border-radius: 20px 20px 0 0; /* تقريب الزوايا العلوية فقط */
+}
 
-        .course-card img {
-          min-height: 220px;
-          border-radius: 24px 24px 0 0;
-        }
+.floating-box {
+    height: auto;
+    min-height: 80px; /* تصغير ارتفاع الصندوق العائم */
+    padding: 10px; /* تقليل الحشو الداخلي */
+    /* باقي الخصائص تبقى كما هي */
+}
 
-        .floating-box {
-          min-height: 100px;
-          padding: 15px;
-          bottom: -70px;
-        }
+.floating-box h3 {
+    font-size: 18px; /* تصغير حجم الخط */
+    margin: 0 0 8px;
+}
 
-        .floating-box h3 {
-          font-size: 22px;
-        }
-
-        .floating-box span {
-          font-size: 16px;
-        }
-      }
+.floating-box span {
+    font-size: 14px; /* تصغير حجم الخط */
+}
 
       /* Mobile devices */
       @media (max-width: 767px) {
