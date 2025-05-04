@@ -555,7 +555,10 @@
             display: flex;
         justify-content: center;
         flex-wrap: wrap;
-    gap: 10px; 
+    gap: 15px; /* تقليل المسافة بين الكروت */
+    padding: 20px 10px; /* تعديل الحشو */
+    overflow-x: auto; /* يسمح بالتمرير الأفقي إذا لم تتسع الشاشة */
+    scrollbar-width: thin; /* لجعل شريط التمرير أنحف (يدعمه Firefox) */
     width: 100%;
 }
 
