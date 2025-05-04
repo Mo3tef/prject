@@ -551,14 +551,11 @@
         transition: transform 0.5s;
       }
       @media (max-width: 768px) {
-        .card-container {
+       .card-container {
     display: flex;
-    justify-content: flex-start; /* بدلاً من center لتجنب فراغات غير مرغوبة */
-    flex-wrap: nowrap; /* يمنع الانتقال لصف جديد */
+    justify-content: center;
     gap: 15px; /* تقليل المسافة بين الكروت */
     padding: 20px 10px; /* تعديل الحشو */
-    overflow-x: auto; /* يسمح بالتمرير الأفقي إذا لم تتسع الشاشة */
-    scrollbar-width: thin; /* لجعل شريط التمرير أنحف (يدعمه Firefox) */
     -webkit-overflow-scrolling: touch; /* لسلاسة التمرير على الموبايل */
     width: 100%;
 }
@@ -575,30 +572,7 @@
     margin: 0; /* إزالة أي هوامش خارجية */
 }
 
-.course-card img {
-    width: 100%;
-    height: auto;
-    min-height: 180px; /* تصغير ارتفاع الصورة */
-    object-fit: cover;
-    border-radius: 20px 20px 0 0; /* تقريب الزوايا العلوية فقط */
-}
-
-.floating-box {
-    height: auto;
-    min-height: 80px; /* تصغير ارتفاع الصندوق العائم */
-    padding: 10px; /* تقليل الحشو الداخلي */
-    /* باقي الخصائص تبقى كما هي */
-}
-
-.floating-box h3 {
-    font-size: 18px; /* تصغير حجم الخط */
-    margin: 0 0 8px;
-}
-
-.floating-box span {
-    font-size: 14px; /* تصغير حجم الخط */
-}
-
+      }
       /* Mobile devices */
       @media (max-width: 767px) {
         header {
