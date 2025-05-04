@@ -551,31 +551,50 @@
         transition: transform 0.5s;
       }
       @media (max-width: 768px) {
-        .card-container {
+.card-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: nowrap; /* يمنع الانتقال لصف جديد */
-    gap: 15px; /* تقليل المسافة بين الكروت */
-    padding: 20px 10px; /* تعديل الحشو */
-    overflow-x: auto; /* يسمح بالتمرير الأفقي إذا لم تتسع الشاشة */
-    scrollbar-width: thin; /* لجعل شريط التمرير أنحف (يدعمه Firefox) */
-    -webkit-overflow-scrolling: touch; /* لسلاسة التمرير على الموبايل */
+    flex-wrap: nowrap; /* يمنع الانتقال لسطر جديد */
+    gap: 20px;
+    padding: 30px; /* زيادة الحشو حول الكروت */
+    overflow-x: auto; /* يسمح بالتمرير الأفقي إذا لزم الأمر */
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
     width: 100%;
 }
 
 .course-card {
-    position: relative;
-    width: 260px; /* تصغير حجم الكرت (يمكن استخدام 30vw للتكيف مع الشاشة) */
-    min-width: 260px; /* يمنع تقلص الكرت */
-    border-radius: 20px;
-    overflow: visible;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* تخفيف الظل */
-    transition: transform 0.3s;
-    flex-shrink: 0; /* يمنع الكرت من الضغط عند التمرير */
-    margin: 0; /* إزالة أي هوامش خارجية */
+    width: 320px; /* زيادة عرض الكارت */
+    min-width: 320px; /* منع التقلص */
+    border-radius: 24px; /* زوايا أكثر استدارة */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* ظل أعمق */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    margin: 0;
 }
 
-      }
+.course-card:hover {
+    transform: scale(1.03); /* تأثير تكبير عند التحويم */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+    min-height: 220px; /* زيادة ارتفاع الصورة */
+    border-radius: 24px 24px 0 0;
+}
+
+.floating-box {
+    min-height: 100px; /* زيادة ارتفاع الصندوق العائم */
+    padding: 15px;
+    bottom: -70px; /* تعديل موقعه ليتناسب مع الحجم الجديد */
+}
+
+.floating-box h3 {
+    font-size: 22px; /* زيادة حجم النص */
+}
+
+.floating-box span {
+    font-size: 16px;
+}
       
       /* Mobile devices */
       @media (max-width: 767px) {
