@@ -551,98 +551,52 @@
         transition: transform 0.5s;
       }
       @media (max-width: 768px) {
-              .card-container {
-    display: grid;
-    grid-auto-flow: column; /* صف أفقي دائم */
-    grid-auto-columns: minmax(300px, 1fr); /* حد أدنى 300px مع تمدد إذا توفر المساحة */
-    gap: 25px;
-    padding: 30px;
-    overflow-x: auto;
-}
-
-.course-card {
-    width: 100%; /* سيشغل المساحة المحددة في grid */
-    min-width: 0; /* يسمح بالضغط عند الحاجة */
-}
-/* .card-container {
-    display: flex;
-    flex-wrap: nowrap; 
-    gap: 20px;
-    padding: 30px; 
-    overflow-x: auto; 
-    scrollbar-width: thin;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-}
-
-.course-card {
-    width: 320px; 
-    min-width: 320px;
-    border-radius: 24px; 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex-shrink: 0;
-    margin: 0;
-}
-
-.course-card:hover {
-    transform: scale(1.03); 
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-}
-
-.course-card img {
-    min-height: 220px; 
-    border-radius: 24px 24px 0 0;
-}
-
-.floating-box {
-    min-height: 100px; 
-    padding: 15px;
-    bottom: -70px; 
-}
-
-.floating-box h3 {
-    font-size: 22px; 
-}
-
-.floating-box span {
-    font-size: 16px;
-} */
-/* ------------------------------------------------------------------------------- */
-        @media (min-width: 1200px) {
-    .card-container {
-        justify-content: center;
-        flex-wrap: wrap;
-        overflow-x: visible;
-    }
-    .course-card {
-        width: calc(25% - 20px); /* 4 كروت في الصف */
-        min-width: auto;
-    }
-}
-/* ------------------------------------------------------------------------------- */
         .card-container {
-    display: grid;
-    grid-auto-flow: column; /* صف أفقي دائم */
-    grid-auto-columns: minmax(300px, 1fr); /* حد أدنى 300px مع تمدد إذا توفر المساحة */
-    gap: 25px;
-    padding: 30px;
-    overflow-x: auto;
-}
+          display: flex;
+          flex-wrap: nowrap;
+          gap: 20px;
+          padding: 30px;
+          overflow-x: auto;
+          scrollbar-width: thin;
+          -webkit-overflow-scrolling: touch;
+          width: 100%;
+        }
 
-.course-card {
-    width: 100%; /* سيشغل المساحة المحددة في grid */
-    min-width: 0; /* يسمح بالضغط عند الحاجة */
-}
-/* ------------------------------------------------------------------------------- */
+        .course-card {
+          width: 320px;
+          min-width: 320px;
+          border-radius: 24px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          flex-shrink: 0;
+          margin: 0;
+        }
 
+        .course-card:hover {
+          transform: scale(1.03);
+          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
 
+        .course-card img {
+          min-height: 220px;
+          border-radius: 24px 24px 0 0;
+        }
 
+        .floating-box {
+          min-height: 100px;
+          padding: 15px;
+          bottom: -70px;
+        }
 
+        .floating-box h3 {
+          font-size: 22px;
+        }
 
+        .floating-box span {
+          font-size: 16px;
+        }
+      }
 
-
-        
       /* Mobile devices */
       @media (max-width: 767px) {
         header {
@@ -684,9 +638,6 @@
           margin: 5px;
         }
       }
-
-      
-
     </style>
   </head>
 
