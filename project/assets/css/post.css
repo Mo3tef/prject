@@ -1,0 +1,305 @@
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  /* Light gray background */
+}
+
+/* Main content container */
+.container {
+  width: 60%;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* Soft shadow effect */
+}
+
+/* Remove underline from all links */
+a {
+  text-decoration: none;
+
+}
+
+/* Back to blog button styling */
+.back_to_blog {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: white;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  flex-direction: row-reverse;
+  /* Reverse direction for better RTL support */
+}
+
+/* Change background color on hover */
+.back_to_blog:hover {
+  background: rgb(94, 217, 255);
+}
+
+/* SVG icon inside the button */
+.back_to_blog>svg {
+  width: 34px;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Move icon slightly on hover */
+.back_to_blog:hover svg {
+  transform: translateX(-5px);
+}
+
+/* Scale down button when clicked */
+.back_to_blog:active {
+  transform: scale(0.95);
+}
+
+/* Post title styles */
+.post_title {
+  font-family: cursive;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+/* Author section */
+.author {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Author bio text */
+.bio {
+  font-family: cursive;
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Author image */
+.author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* Circular shape */
+  margin-right: 15px;
+}
+
+/* Author name */
+.author h3 {
+  font-family: "Brush Script MT", cursive;
+  margin: 0;
+}
+
+/* Paragraph styling */
+.paragraph {
+  padding-bottom: 15px;
+}
+
+/* List styles */
+.list,
+ol {
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* Code block styling */
+pre {
+  background: #222;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  overflow-x: auto;
+  /* Enable horizontal scrolling */
+}
+
+/* Additional topic margin */
+.topic {
+  margin: 10px;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Footer container */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Footer title */
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Social media icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+/* Social media wrapper */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 15px auto;
+  width: fit-content;
+}
+
+
+/* Social media icon styling */
+.wrapper .icon {
+  position: relative;
+  background: #444;
+  border-radius: 50%;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Tooltip (hidden by default) */
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Tooltip arrow */
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Show tooltip on hover */
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Social media icon hover effect */
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Facebook icon hover color */
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+/* Twitter icon hover color */
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+/* Instagram icon hover color */
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+/* LinkedIn icon hover color */
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0077b5;
+  color: #fff;
+}
+
+/* GitHub icon hover color */
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333;
+  color: #fff;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+  .container {
+    width: 80%;
+    /* Make container wider */
+  }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    /* Further adjust container width */
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .post_title {
+    font-size: 24px;
+    /* Adjust font size for readability */
+  }
+
+  .back_to_blog {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .footer h3 {
+    font-size: 16px;
+    /* Adjust footer text size */
+  }
+}

@@ -1,0 +1,485 @@
+/* Global Styles */
+body {
+    width: 100%;
+    /* Ensures body takes full width */
+    overflow-x: clip;
+    /* Prevents horizontal scrolling */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ensures consistent box model */
+    background-size: cover;
+    /* Ensures the background covers the entire screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Keeps background fixed while scrolling */
+    height: 100vh;
+    /* Full viewport height */
+    font-family: Arial, sans-serif;
+    /* Sets default font */
+    text-align: center;
+    /* Centers text horizontally */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgb(255, 255, 255);
+    /* Semi-transparent background for navbar */
+    display: flex;
+    justify-content: space-between;
+    /* Aligns items to both ends of navbar */
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    /* Fixes navbar at the top of the page */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Ensures navbar stays above other elements */
+    box-sizing: border-box;
+}
+
+.navbar ul {
+    list-style: none;
+    /* Removes default list styling */
+    display: flex;
+    gap: 30px;
+    /* Spacing between navigation items */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    /* Removes underline from links */
+    color: black;
+    /* Sets link color */
+    font-weight: bold;
+    /* Makes text bold */
+}
+
+/* Navigation Links */
+.links {
+    color: #000;
+    /* Sets link color */
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* Rounded corners for links */
+    text-decoration: none;
+    /* Removes underline */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition on hover */
+    font-family: 'Courier New', Courier, monospace;
+    /* Custom font */
+    font-weight: bold;
+    /* Makes text bold */
+}
+
+.links:hover {
+    background: rgb(94, 217, 255);
+    /* Background color on hover */
+    font-size: larger;
+    /* Increases font size on hover */
+    color: #000;
+    /* Keeps text color black on hover */
+}
+
+/* Logo Styles */
+.logo img {
+    width: 45px;
+    /* Sets logo size */
+    height: 45px;
+    /* Sets logo size */
+    cursor: pointer;
+    /* Changes cursor to pointer on hover */
+    transition: all 0.5s;
+    /* Smooth transition on hover */
+    border-radius: 10px;
+    /* Rounds the corners of the logo */
+}
+
+.logo img:hover {
+    transform: scale(1.4);
+    /* Enlarges logo on hover */
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    /* Limits maximum width */
+    margin: 100px auto 0;
+    /* Centers container with top margin */
+    min-height: 100vh;
+    /* Full viewport height */
+    padding-bottom: 50px;
+    /* Adds space at the bottom */
+}
+
+/* Section Styling */
+.section {
+    width: 120%;
+    /* Slightly wider section */
+    background: rgba(0, 0, 0, 0.85);
+    /* Dark background */
+    padding: 20px;
+    border-radius: 10px;
+    /* Rounded corners */
+    color: white;
+    /* White text color */
+}
+
+/* Input Fields */
+input {
+    width: 95%;
+    /* Almost full width */
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    /* Removes border */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Select Dropdown */
+select {
+    width: 98%;
+    /* Almost full width */
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    /* Removes border */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Button 1 Styling */
+.button1 {
+    background-image: linear-gradient(to bottom right, #85a1a8, #ffffff);
+    /* Gradient background */
+    padding: 1.3em 3em;
+    /* Padding for button */
+    font-size: 15px;
+    /* Font size */
+    text-transform: uppercase;
+    /* Uppercase text */
+    letter-spacing: 2.5px;
+    /* Spacing between letters */
+    font-weight: 500;
+    /* Font weight */
+    color: #000;
+    /* Black text color */
+    background-color: #fff;
+    /* White background */
+    border: none;
+    /* Removes border */
+    border-radius: 45px;
+    /* Rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    transition: all 0.3s ease 0s;
+    /* Smooth transition */
+    cursor: pointer;
+    /* Changes cursor to pointer */
+    outline: none;
+    /* Removes outline */
+}
+
+.button1:hover {
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    /* Stronger shadow on hover */
+    color: #fff;
+    /* White text on hover */
+    transform: translateY(-7px);
+    /* Moves button up slightly */
+}
+
+.button1:active {
+    transform: translateY(-1px);
+    /* Slight movement when button is clicked */
+}
+
+/* Button 3 Styling */
+.button3 {
+    background-image: linear-gradient(to bottom right, #ffffff);
+    /* Gradient background */
+    padding: 1.3em 3em;
+    /* Padding for button */
+    font-size: 15px;
+    /* Font size */
+    text-transform: uppercase;
+    /* Uppercase text */
+    letter-spacing: 2.5px;
+    /* Spacing between letters */
+    font-weight: 500;
+    /* Font weight */
+    color: #000;
+    /* Black text color */
+    background-color: #fff;
+    /* White background */
+    border: none;
+    /* Removes border */
+    border-radius: 45px;
+    /* Rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    transition: all 0.3s ease 0s;
+    /* Smooth transition */
+    cursor: pointer;
+    /* Changes cursor to pointer */
+    outline: none;
+    /* Removes outline */
+}
+
+.button3:hover {
+    background-color: #23c483;
+    /* Green background on hover */
+    box-shadow: 0px 15px 20px #9fbdc4;
+    /* Stronger shadow on hover */
+    color: #fff;
+    /* White text on hover */
+    transform: translateY(-7px);
+    /* Moves button up slightly */
+}
+
+.button3:active {
+    transform: translateY(-1px);
+    /* Slight movement when button is clicked */
+}
+
+/* Button 2 (Delete Button) */
+.button2 {
+    width: 150px;
+    /* Sets width */
+    height: 58px;
+    /* Sets height */
+    border-radius: 45px;
+    /* Rounded corners */
+    background-color: rgb(20, 20, 20);
+    /* Dark background */
+    border: none;
+    /* Removes border */
+    font-weight: 600;
+    /* Font weight */
+    display: flex;
+    align-items: center;
+    /* Centers icon vertically */
+    justify-content: center;
+    /* Centers icon horizontally */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    /* Shadow effect */
+    cursor: pointer;
+    /* Changes cursor to pointer */
+    transition-duration: .3s;
+    /* Smooth transition */
+    overflow: hidden;
+    /* Prevents overflow */
+    position: relative;
+    /* For positioning pseudo elements */
+}
+
+.svgIcon {
+    width: 12px;
+    /* Sets icon size */
+    transition-duration: .3s;
+    /* Smooth transition */
+}
+
+.svgIcon path {
+    fill: white;
+    /* Icon color */
+}
+
+.button2:hover {
+    width: 140px;
+    /* Reduces width on hover */
+    border-radius: 50px;
+    /* Rounds the corners more on hover */
+    background-color: rgb(255, 69, 69);
+    /* Red background on hover */
+    align-items: center;
+    /* Centers the icon */
+}
+
+.button2:hover .svgIcon {
+    width: 50px;
+    /* Increases icon size */
+    transform: translateY(60%);
+    /* Moves icon down */
+}
+
+.button2::before {
+    position: absolute;
+    /* Positions text above button */
+    top: -20px;
+    content: "Delete";
+    /* Text on the button */
+    color: white;
+    /* Text color */
+    font-size: 12px;
+    /* Initial font size */
+}
+
+.button2:hover::before {
+    font-size: 15px;
+    /* Larger font on hover */
+    opacity: 1;
+    /* Makes text visible */
+    transform: translateY(30px);
+    /* Moves text down */
+}
+
+.button2:active {
+    transform: translateY(-8px);
+    /* Slight movement when button is clicked */
+}
+
+/* Math Box Styling */
+.math-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two equal-width columns */
+    gap: 15px;
+    /* Space between items */
+}
+
+/* Math Section */
+.math-section {
+    background: rgba(255, 255, 255, 0.3);
+    /* Light background */
+    padding: 15px;
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three equal-width columns */
+    gap: 10px;
+    /* Space between items */
+}
+
+/* Answer Box */
+.answer-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    /* Adds space above */
+}
+
+/* Buttons Container */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    /* Centers buttons horizontally */
+    align-items: center;
+    /* Centers buttons vertically */
+    gap: 15px;
+    /* Space between buttons */
+}
+
+/* Information Bar */
+.infoBar {
+    background: rgba(255, 255, 255, 0.3);
+    /* Light background */
+    padding: 15px;
+    border-radius: 5px;
+    /* Rounded corners */
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    /* Border around info bar */
+    margin-bottom: 10px;
+    /* Space below */
+}
+
+/* Footer Styling */
+.Footer {
+    text-align: center;
+    /* Centers text */
+    padding: 15px;
+    background: #333;
+    /* Dark background */
+    color: white;
+    /* White text */
+    margin-top: 20px;
+
+}
+
+/* Responsive Design for tablets and below */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        /* Reduce width of container */
+        margin-top: 40px;
+        /* Adjust margin on top */
+    }
+
+    .button1,
+    .button3 {
+        font-size: 12px;
+        /* Smaller font size */
+        padding: 1em 1.5em;
+        /* Reduced padding */
+    }
+
+    .button2 {
+        font-size: 12px;
+        /* Smaller font size */
+        width: 100px;
+        /* Reduce width */
+        height: 38px;
+        /* Reduce height */
+    }
+}
+
+/* Responsive Design for mobile devices */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        /* Full width */
+        padding: 10px;
+        /* Padding inside container */
+    }
+    .section{
+        margin-left: 90px;
+    }
+
+    .math-box {
+        grid-template-columns: 1fr;
+        /* Single column grid */
+    }
+
+    .button1,
+    .button3 {
+        font-size: 12px;
+        /* Smaller font size */
+        padding: 1em;
+        /* Reduced padding */
+    }
+
+    .button2 {
+        font-size: 12px;
+        /* Smaller font size */
+        width: 100px;
+        /* Reduce width */
+        height: 38px;
+        /* Reduce height */
+    }
+    .Footer{
+        width: 440px;
+    }
+}
+
+/* Import the main stylesheet for the homepage */
+@import url('theme1.css');
+@import url('theme2.css');
+@import url('theme3.css');

@@ -1,0 +1,413 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #f9f9fb;
+  color: #1a2a43;
+  line-height: 1.6;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background-color: #1a2a43;
+  transition: background-color 0.3s ease;
+}
+
+.logo-navbar {
+  height: 50px;
+  margin-left: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin-right: auto;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.nav-links li a:hover {
+  background-color: #f8b500;
+  color: #fff;
+}
+
+/* Contact Cards Section */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  background: #ffffff;
+  padding: 120px 20px 40px;
+}
+
+/* Individual Contact Card */
+.card {
+  text-align: center;
+  max-width: 220px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 120px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Contact Form Container */
+.contact-wrap {
+  background: #f1f4fa;
+  padding: 60px 20px 100px;
+}
+
+/* Contact Form Box */
+.contact-box {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.contact-box h2 {
+  font-size: 26px;
+  text-align: center;
+  color: #1a2a43;
+  margin-bottom: 32px;
+  font-weight: 700;
+}
+
+/* Form Layout */
+.form-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.form-row .form-group {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Form Input Groups */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: #222;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  background: #fdfdfd;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #f8b500;
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.btn-send {
+  width: 100%;
+  padding: 16px;
+  background: #f8b500;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-send:hover {
+  background: #e1a000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    margin-right: 0;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+  }
+
+  .logo-navbar {
+    height: 45px;
+  }
+
+  .contact-box {
+    padding: 30px 20px;
+  }
+}
+
+/* Dark Mode Toggle Button */
+.toggle-btn {
+  background-color: #f8b500;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #d19a00;
+}
+
+/* Dark Mode Switch */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73c0fc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+/* Sun and Moon Icons */
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  animation: rotate 15s linear infinite;
+}
+
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  animation: tilt 5s linear infinite;
+}
+
+/* Animations */
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Switch States */
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+  background-color: #1a2a43;
+}
+
+body.dark-mode .nav-links li a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .nav-links li a:hover {
+  background-color: #f8b500;
+  color: #121212;
+}
+
+body.dark-mode .cards {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .card {
+  border-radius: 14px;
+}
+
+body.dark-mode .card h3 {
+  color: #f8b500;
+}
+
+body.dark-mode .card p {
+  color: #ccc;
+}
+
+body.dark-mode .contact-wrap {
+  background-color: #191919;
+}
+
+body.dark-mode .contact-box {
+  background-color: #2a2a2a;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .contact-box h2 {
+  color: #f8b500;
+}
+
+body.dark-mode .form-group label {
+  color: #ccc;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background-color: #333;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+  border-color: #f8b500;
+}
+
+body.dark-mode .btn-send {
+  background-color: #f8b500;
+  color: #121212;
+}
+
+body.dark-mode .btn-send:hover {
+  background-color: #e1a000;
+}
+
+body.dark-mode .toggle-btn {
+  background-color: #d32f2f;
+}
+
+body.dark-mode .toggle-btn:hover {
+  background-color: #b71c1c;
+}

@@ -1,0 +1,537 @@
+/* General Body Styling */
+body {
+    width: 100%;
+    /* Full width */
+    overflow-x: clip;
+    /* Prevent horizontal scroll */
+    margin: 0;
+    /* Remove margin */
+    padding: 0;
+    /* Remove padding */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width/height */
+    background-image: url('./images/DALL·E\ 2025-02-26\ 03.48.40\ -\ A\ seamless\ cartoon-style\ space-themed\ background\ for\ a\ children\'s\ calculator\ website.\ The\ background\ features\ playful\,\ colorful\ planets\,\ stars\,\ and\ ro.webp');
+    background-size: cover;
+    /* Ensure the background covers the entire screen */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Prevent background from repeating */
+    background-attachment: fixed;
+    /* Make background fixed when scrolling */
+    height: 100vh;
+    /* Full viewport height */
+    font-family: fantasy;
+    /* Set font family */
+    text-align: center;
+    /* Center text */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: rgba(19, 57, 139, 0.8);
+    display: flex;
+    /* Flexbox layout for navbar */
+    justify-content: space-between;
+    /* Space between items */
+    align-items: center;
+    /* Center items vertically */
+    padding: 10px 20px;
+    /* Padding inside navbar */
+    width: 100%;
+    /* Full width */
+    position: fixed;
+    /* Fix navbar to the top */
+    top: 0;
+    /* Align to top */
+    left: 0;
+    /* Align to left */
+    z-index: 1000;
+    /* Make navbar appear above other elements */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width/height */
+}
+
+/* Navbar list styling */
+.navbar ul {
+    list-style: none;
+    /* Remove bullet points */
+    display: flex;
+    /* Flexbox layout for navbar items */
+    gap: 30px;
+    /* Space between items */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+/* Navbar links styling */
+.navbar ul li a {
+    text-decoration: none;
+    /* Remove underline */
+    color: #f4f1de;
+    /* Set text color to white */
+    font-weight: bold;
+    /* Make text bold */
+}
+
+
+/* Link styling with hover effect */
+.links {
+    color: #000;
+    /* Set text color */
+    padding: 5px 10px;
+    /* Padding around the link */
+    border-radius: 5px;
+    /* Rounded corners */
+    text-decoration: none;
+    /* Remove underline */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition for hover effects */
+    font-family: 'Courier New', Courier, monospace;
+    /* Set font */
+    font-weight: bold;
+    /* Bold text */
+}
+
+.links:hover {
+    background: rgba(106, 90, 205, 0.85);
+    /* Background color on hover */
+    font-size: larger;
+    /* Increase font size on hover */
+    color: white;
+    /* Set text color to white on hover */
+}
+
+/* Logo image styling */
+.logo img {
+    width: 45px;
+    /* Set width of logo */
+    height: 45px;
+    /* Set height of logo */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    transition: all 0.5s;
+    /* Smooth transition for hover effect */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+.logo img:hover {
+    transform: scale(1.4);
+    /* Scale up logo on hover */
+}
+
+.logo img:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+
+/* Container for the content */
+.container {
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    gap: 20px;
+    /* Space between elements */
+    width: 100%;
+    /* Full width */
+    max-width: 600px;
+    /* Max width for the container */
+    margin: 100px auto 0;
+    /* Center container with margin at top */
+    min-height: 100vh;
+    /* Minimum height of container */
+    padding-bottom: 50px;
+    /* Padding at the bottom */
+}
+
+/* Styling for sections */
+.section {
+    width: 120%;
+    /* Expand section slightly beyond the container */
+    background: rgba(106, 90, 205, 0.85);
+    /* Background color with transparency */
+    padding: 20px;
+    /* Padding inside the section */
+    border-radius: 10px;
+    /* Rounded corners */
+    color: rgb(0, 0, 0);
+    /* Text color */
+}
+
+/* Input Fields Styling */
+input {
+    width: 95%;
+    /* Input width */
+    padding: 10px;
+    /* Padding inside the input */
+    margin: 10px 0;
+    /* Margin around input */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Dropdown (select) Styling */
+select {
+    width: 98%;
+    /* Dropdown width */
+    padding: 10px;
+    /* Padding inside the select box */
+    margin: 10px 0;
+    /* Margin around select box */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Button 1 Styling */
+.button1 {
+    background: linear-gradient(to right, #FF4500, #FFD700);
+    /* Gradient background */
+    padding: 1.3em 3em;
+    /* Padding inside the button */
+    font-size: 15px;
+    /* Font size */
+    text-transform: uppercase;
+    /* Uppercase text */
+    letter-spacing: 2.5px;
+    /* Letter spacing */
+    font-weight: 500;
+    /* Font weight */
+    color: #000;
+    /* Text color */
+    background-color: #fff;
+    /* White background color */
+    border: none;
+    /* No border */
+    border-radius: 45px;
+    /* Rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    transition: all 0.3s ease 0s;
+    /* Smooth transition */
+    cursor: pointer;
+    /* Pointer cursor */
+    outline: none;
+    /* Remove outline */
+}
+
+/* Button 1 Hover Effect */
+.button1:hover {
+    box-shadow: 0px 15px 20px rgb(29, 53, 160);
+    /* Larger shadow on hover */
+    color: #fff;
+    /* Change text color on hover */
+    transform: translateY(-7px);
+    /* Move button upwards */
+}
+
+/* Button 1 Active Effect */
+.button1:active {
+    transform: translateY(-1px);
+    /* Slight move down when clicked */
+}
+
+/* Button 3 Styling (similar to Button 1 but with different colors) */
+.button3 {
+    background: linear-gradient(to right, #00FFFF, #0000FF);
+    /* Gradient background */
+    padding: 1.3em 3em;
+    /* Padding inside the button */
+    font-size: 15px;
+    /* Font size */
+    text-transform: uppercase;
+    /* Uppercase text */
+    letter-spacing: 2.5px;
+    /* Letter spacing */
+    font-weight: 500;
+    /* Font weight */
+    color: #000;
+    /* Text color */
+    background-color: #fff;
+    /* White background color */
+    border: none;
+    /* No border */
+    border-radius: 45px;
+    /* Rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    transition: all 0.3s ease 0s;
+    /* Smooth transition */
+    cursor: pointer;
+    /* Pointer cursor */
+    outline: none;
+    /* Remove outline */
+}
+
+/* Button 3 Hover Effect */
+.button3:hover {
+    box-shadow: 0px 15px 20px #5cc0d6;
+    /* Larger shadow on hover */
+    color: #fff;
+    /* Change text color on hover */
+    transform: translateY(-7px);
+    /* Move button upwards */
+    background-color: #8A2BE2;
+    /* Change background color */
+}
+
+/* Button 3 Active Effect */
+.button3:active {
+    transform: translateY(-1px);
+    /* Slight move down when clicked */
+}
+
+/* Button 2 (Delete Button) Styling */
+.button2 {
+    width: 150px;
+    /* Button width */
+    height: 58px;
+    /* Button height */
+    border-radius: 45px;
+    /* Rounded corners */
+    background-color: rgb(20, 20, 20);
+    /* Dark background */
+    border: none;
+    /* No border */
+    font-weight: 600;
+    /* Font weight */
+    display: flex;
+    /* Flexbox layout */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    /* Shadow effect */
+    cursor: pointer;
+    /* Pointer cursor */
+    transition-duration: .3s;
+    /* Transition effect */
+    overflow: hidden;
+    /* Hide overflow */
+    position: relative;
+    /* Position relative */
+}
+
+/* SVG Icon inside Button 2 */
+.svgIcon {
+    width: 12px;
+    /* Small icon width */
+    transition-duration: .3s;
+    /* Transition effect */
+}
+
+/* Icon Path Fill Color */
+.svgIcon path {
+    fill: white;
+    /* Icon color */
+}
+
+/* Button 2 Hover Effect */
+.button2:hover {
+    width: 140px;
+    /* Reduce width on hover */
+    border-radius: 50px;
+    /* Change to circular shape */
+    background-color: rgb(255, 69, 69);
+    /* Change background color */
+    align-items: center;
+    /* Center icon */
+}
+
+/* SVG Icon Hover Effect */
+.button2:hover .svgIcon {
+    width: 50px;
+    /* Expand icon size */
+    transform: translateY(60%);
+    /* Move icon down */
+}
+
+/* Button 2 Hover Text Effect */
+.button2::before {
+    position: absolute;
+    /* Position text absolutely */
+    top: -20px;
+    /* Position it above the button */
+    content: "Delete";
+    /* Text content */
+    color: white;
+    /* Text color */
+    font-size: 12px;
+    /* Small font size */
+    transition-duration: .3s;
+    /* Transition effect */
+}
+
+/* Hover Effect for Button 2 Text */
+.button2:hover::before {
+    font-size: 15px;
+    /* Increase font size on hover */
+    opacity: 1;
+    /* Show text */
+    transform: translateY(30px);
+    /* Move text down */
+}
+
+/* Button 2 Active Effect */
+.button2:active {
+    transform: translateY(-8px);
+    /* Move button down when clicked */
+}
+
+/* Math Box Layout */
+.math-box {
+    display: grid;
+    /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr);
+    /* Two equal columns */
+    gap: 15px;
+    /* Space between items */
+}
+
+/* Math Section Styling */
+.math-section {
+    background: rgba(255, 255, 255, 0.3);
+    /* Transparent white background */
+    padding: 15px;
+    /* Padding inside section */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Buttons Container Layout */
+.buttons {
+    display: grid;
+    /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr);
+    /* Three equal columns */
+    gap: 10px;
+    /* Space between buttons */
+}
+
+/* Answer Box Container Styling */
+.answer-box-container {
+    display: flex;
+    /* Flex layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    gap: 10px;
+    /* Space between elements */
+    margin-top: 10px;
+    /* Margin at the top */
+}
+
+/* Buttons Container */
+.buttons-container {
+    display: flex;
+    /* Flex layout */
+    justify-content: center;
+    /* Center buttons horizontally */
+    align-items: center;
+    /* Center buttons vertically */
+    gap: 15px;
+    /* Space between buttons */
+}
+
+/* Info Bar Styling */
+.infoBar {
+    background: rgba(255, 255, 255, 0.3);
+    /* Transparent white background */
+    padding: 15px;
+    /* Padding inside info bar */
+    border-radius: 5px;
+    /* Rounded corners */
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    /* Border with some transparency */
+    margin-bottom: 10px;
+    /* Margin at the bottom */
+    color: #000;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    /* Center the text */
+    padding: 15px;
+    /* Padding inside footer */
+    background: #2C1A47;
+    /* Dark background */
+    color: white;
+    /* White text */
+    margin-top: 20px;
+    /* Margin at the top */
+    position: relative;
+    /* Position relative */
+    width: 100%;
+    /* Full width */
+}
+
+/* Responsive Design for tablets and below */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        /* Reduce width of container */
+        margin-top: 40px;
+        /* Adjust margin on top */
+    }
+
+    .button1,
+    .button3 {
+        font-size: 12px;
+        /* Smaller font size */
+        padding: 1em 1.5em;
+        /* Reduced padding */
+    }
+
+    .button2 {
+        font-size: 12px;
+        /* Smaller font size */
+        width: 100px;
+        /* Reduce width */
+        height: 38px;
+        /* Reduce height */
+    }
+}
+
+/* Responsive Design for mobile devices */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        /* Full width */
+        padding: 10px;
+        /* Padding inside container */
+    }
+
+    .math-box {
+        grid-template-columns: 1fr;
+        /* Single column grid */
+    }
+
+    .button1,
+    .button3 {
+        font-size: 12px;
+        /* Smaller font size */
+        padding: 1em;
+        /* Reduced padding */
+    }
+
+    .button2 {
+        font-size: 12px;
+        /* Smaller font size */
+        width: 100px;
+        /* Reduce width */
+        height: 38px;
+        /* Reduce height */
+    }
+}

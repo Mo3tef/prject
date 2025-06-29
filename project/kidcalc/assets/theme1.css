@@ -1,0 +1,541 @@
+/* Body styling */
+body {
+    width: 100%;
+    /* Set full width */
+    overflow-x: clip;
+    /* Disable horizontal overflow */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width/height */
+    background-image: url('./images/DALL·E\ 2025-02-25\ 15.44.20\ -\ A\ fun\ and\ colorful\ abstract\ background\ for\ a\ children\'s\ calculator\ website\,\ featuring\ bright\,\ vibrant\ colors\ such\ as\ blue\,\ yellow\,\ pink\,\ and\ green.\ Th.webp');
+    /* Set background image */
+    background-size: cover;
+    /* Ensure the background image covers the entire screen */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Prevent the background from repeating */
+    background-attachment: fixed;
+    /* Fix background position when scrolling */
+    height: 100vh;
+    /* Full viewport height */
+    font-family: cursive;
+    /* Set cursive font */
+    text-align: center;
+    /* Center text */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Light transparent background for navbar */
+    display: flex;
+    /* Flexbox layout for navbar */
+    justify-content: space-between;
+    /* Space between items */
+    align-items: center;
+    /* Center items vertically */
+    padding: 10px 20px;
+    /* Padding inside navbar */
+    width: 100%;
+    /* Full width */
+    position: fixed;
+    /* Fix navbar to the top */
+    top: 0;
+    /* Align to top */
+    left: 0;
+    /* Align to left */
+    z-index: 1000;
+    /* Make navbar appear above other elements */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width/height */
+}
+
+/* Navbar list styling */
+.navbar ul {
+    list-style: none;
+    /* Remove bullet points */
+    display: flex;
+    /* Flexbox layout for navbar items */
+    gap: 30px;
+    /* Space between items */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+/* Navbar links styling */
+.navbar ul li a {
+    text-decoration: none;
+    /* Remove underline */
+    color: black;
+    /* Set text color to black */
+    font-weight: bold;
+    /* Make text bold */
+}
+
+
+/* Link styling with hover effect */
+.links {
+    color: #000;
+    /* Set text color */
+    padding: 5px 10px;
+    /* Padding around the link */
+    border-radius: 5px;
+    /* Rounded corners */
+    text-decoration: none;
+    /* Remove underline */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition for hover effects */
+    font-family: 'Courier New', Courier, monospace;
+    /* Set font */
+    font-weight: bold;
+    /* Bold text */
+}
+
+.links:hover {
+    background: rgb(94, 217, 255);
+    /* Background color on hover */
+    font-size: larger;
+    /* Increase font size on hover */
+    color: #000;
+    /* Set text color to black on hover */
+}
+
+/* Logo image styling */
+.logo img {
+    width: 45px;
+    /* Set width of logo */
+    height: 45px;
+    /* Set height of logo */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    transition: all 0.5s;
+    /* Smooth transition for hover effect */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+.logo img:hover {
+    transform: scale(1.4);
+    /* Scale up logo on hover */
+}
+
+
+/* Container for the main content */
+.container {
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    gap: 20px;
+    /* Space between items */
+    width: 100%;
+    /* Full width */
+    max-width: 600px;
+    /* Max width for content */
+    margin: 100px auto 0;
+    /* Center content with margin on top */
+    min-height: 100vh;
+    /* Minimum height of the container */
+    padding-bottom: 50px;
+    /* Padding at the bottom */
+}
+
+/* Section styling inside the container */
+.section {
+    width: 120%;
+    /* Slightly wider than container */
+    background: rgba(30, 30, 70, 0.85);
+    /* Semi-transparent background */
+    padding: 20px;
+    /* Padding inside the section */
+    border-radius: 10px;
+    /* Rounded corners */
+    color: white;
+    /* White text */
+}
+
+/* Input field styling */
+input {
+    width: 95%;
+    /* Slightly less than full width */
+    padding: 10px;
+    /* Padding inside the input */
+    margin: 10px 0;
+    /* Margin around input */
+    border: none;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Select dropdown styling */
+select {
+    width: 98%;
+    /* Almost full width */
+    padding: 10px;
+    /* Padding inside the select */
+    margin: 10px 0;
+    /* Margin around select */
+    border: none;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Button 1 (Gradient blue button) styling */
+.button1 {
+    background-image: linear-gradient(to bottom right, #00c6ff, #0072ff);
+    /* Gradient background */
+    padding: 1.3em 3em;
+    /* Padding inside the button */
+    font-size: 15px;
+    /* Font size */
+    text-transform: uppercase;
+    /* Uppercase text */
+    letter-spacing: 2.5px;
+    /* Space between letters */
+    font-weight: 500;
+    /* Medium font weight */
+    color: #000;
+    /* Black text */
+    background-color: #fff;
+    /* White background */
+    border: none;
+    /* No border */
+    border-radius: 45px;
+    /* Rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /* Box shadow for depth */
+    transition: all 0.3s ease 0s;
+    /* Smooth transition */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    outline: none;
+    /* Remove outline */
+}
+
+/* Hover effect for button 1 */
+.button1:hover {
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    /* Bigger shadow on hover */
+    color: #fff;
+    /* White text on hover */
+    transform: translateY(-7px);
+    /* Lift the button */
+}
+
+/* Active state for button 1 */
+.button1:active {
+    transform: translateY(-1px);
+    /* Slightly depress the button */
+}
+
+/* Button 3 (Yellow-orange gradient button) styling */
+.button3 {
+    font-family: cursive;
+    /* Set cursive font */
+    background-image: linear-gradient(to bottom right, #ffff00, #e6a423);
+    /* Gradient background */
+    padding: 1.3em 3em;
+    /* Padding inside the button */
+    font-size: 15px;
+    /* Font size */
+    text-transform: uppercase;
+    /* Uppercase text */
+    letter-spacing: 2.5px;
+    /* Space between letters */
+    font-weight: 500;
+    /* Medium font weight */
+    color: #000;
+    /* Black text */
+    background-color: #fff;
+    /* White background */
+    border: none;
+    /* No border */
+    border-radius: 45px;
+    /* Rounded corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    /* Box shadow for depth */
+    transition: all 0.3s ease 0s;
+    /* Smooth transition */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    outline: none;
+    /* Remove outline */
+}
+
+/* Hover effect for button 3 */
+.button3:hover {
+    background-color: #23c483;
+    /* Green background on hover */
+    box-shadow: 0px 15px 20px #9fbdc4;
+    /* Bigger shadow on hover */
+    color: #fff;
+    /* White text on hover */
+    transform: translateY(-7px);
+    /* Lift the button */
+}
+
+/* Active state for button 3 */
+.button3:active {
+    transform: translateY(-1px);
+    /* Slightly depress the button */
+}
+
+/* Button 2 (Delete button) styling */
+.button2 {
+    width: 150px;
+    /* Fixed width */
+    height: 58px;
+    /* Fixed height */
+    border-radius: 45px;
+    /* Rounded corners */
+    background-color: rgb(20, 20, 20);
+    /* Dark background */
+    border: none;
+    /* No border */
+    font-weight: 600;
+    /* Bold text */
+    display: flex;
+    /* Flexbox layout */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    /* Box shadow for depth */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition-duration: .3s;
+    /* Smooth transition */
+    overflow: hidden;
+    /* Prevent overflow */
+    position: relative;
+    /* Relative positioning */
+}
+
+/* SVG icon inside button */
+.svgIcon {
+    width: 12px;
+    /* Set width of icon */
+    transition-duration: .3s;
+    /* Smooth transition */
+}
+
+.svgIcon path {
+    fill: white;
+    /* Set icon color to white */
+}
+
+/* Hover effect for button 2 */
+.button2:hover {
+    width: 140px;
+    /* Shrink the button on hover */
+    border-radius: 50px;
+    /* Make the button round */
+    transition-duration: .3s;
+    /* Smooth transition */
+    background-color: rgb(255, 69, 69);
+    /* Red background on hover */
+    align-items: center;
+    /* Center icon on hover */
+}
+
+/* Hover effect on icon inside button 2 */
+.button2:hover .svgIcon {
+    width: 50px;
+    /* Increase icon size */
+    transition-duration: .3s;
+    /* Smooth transition */
+    transform: translateY(60%);
+    /* Move icon down */
+}
+
+/* Before content for button 2 */
+.button2::before {
+    position: absolute;
+    /* Position relative to button */
+    top: -20px;
+    /* Position above button */
+    content: "Delete";
+    /* Text content */
+    color: white;
+    /* White text */
+    transition-duration: .3s;
+    /* Smooth transition */
+    font-size: 12px;
+    /* Smaller font size */
+}
+
+/* Hover effect for before content in button 2 */
+.button2:hover::before {
+    font-size: 15px;
+    /* Larger font size */
+    opacity: 1;
+    /* Make text visible */
+    transform: translateY(30px);
+    /* Move text down */
+    transition-duration: .3s;
+    /* Smooth transition */
+}
+
+/* Active state for button 2 */
+.button2:active {
+    transform: translateY(-8px);
+    /* Slightly depress the button */
+}
+
+/* Math box grid layout */
+.math-box {
+    display: grid;
+    /* Grid layout */
+    grid-template-columns: repeat(2, 1fr);
+    /* Two equal columns */
+    gap: 15px;
+    /* Space between grid items */
+}
+
+/* Math section styling */
+.math-section {
+    background: rgba(255, 255, 255, 0.3);
+    /* Semi-transparent background */
+    padding: 15px;
+    /* Padding inside the section */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Buttons grid layout */
+.buttons {
+    display: grid;
+    /* Grid layout */
+    grid-template-columns: repeat(3, 1fr);
+    /* Three equal columns */
+    gap: 10px;
+    /* Space between buttons */
+}
+
+/* Answer box container styling */
+.answer-box-container {
+    display: flex;
+    /* Flexbox layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    gap: 10px;
+    /* Space between items */
+    margin-top: 10px;
+    /* Margin on top */
+}
+
+/* Buttons container styling */
+.buttons-container {
+    display: flex;
+    /* Flexbox layout */
+    justify-content: center;
+    /* Center buttons horizontally */
+    align-items: center;
+    /* Center buttons vertically */
+    gap: 15px;
+    /* Space between buttons */
+}
+
+/* Info bar styling */
+.infoBar {
+    background: rgba(255, 255, 255, 0.3);
+    /* Semi-transparent background */
+    padding: 15px;
+    /* Padding inside the info bar */
+    border-radius: 5px;
+    /* Rounded corners */
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    /* Border for the info bar */
+    margin-bottom: 10px;
+    /* Margin below info bar */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    /* Center text */
+    padding: 15px;
+    /* Padding inside footer */
+    background: #333;
+    /* Dark background */
+    color: white;
+    /* White text */
+    margin-top: 20px;
+    /* Margin on top */
+    position: relative;
+    /* Relative positioning */
+    width: 100%;
+    /* Full width */
+}
+
+/* Responsive Design for tablets and below */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        /* Reduce width of container */
+        margin-top: 40px;
+        /* Adjust margin on top */
+    }
+
+    .button1,
+    .button3 {
+        font-size: 12px;
+        /* Smaller font size */
+        padding: 1em 1.5em;
+        /* Reduced padding */
+    }
+
+    .button2 {
+        font-size: 12px;
+        /* Smaller font size */
+        width: 100px;
+        /* Reduce width */
+        height: 38px;
+        /* Reduce height */
+    }
+}
+
+/* Responsive Design for mobile devices */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        /* Full width */
+        padding: 10px;
+        /* Padding inside container */
+    }
+
+    .math-box {
+        grid-template-columns: 1fr;
+        /* Single column grid */
+    }
+
+    .button1,
+    .button3 {
+        font-size: 12px;
+        /* Smaller font size */
+        padding: 1em;
+        /* Reduced padding */
+    }
+
+    .button2 {
+        font-size: 12px;
+        /* Smaller font size */
+        width: 100px;
+        /* Reduce width */
+        height: 38px;
+        /* Reduce height */
+    }
+}
