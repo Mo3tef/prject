@@ -1,373 +1,0 @@
-<!DOCTYPE html>
-<html lang="en" dir="rtl">
-  <head>
-    <!-- Meta tags for character encoding and responsive viewport -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Page title -->
-    <title>Toy Store</title>
-    <!-- Google Fonts import for Cairo font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- External CSS stylesheet link -->
-    <link rel="stylesheet" href="/toy store/style_store.css" />
-  </head>
-  <body>
-    <!-- Navbar Section -->
-    <header class="navbar">
-      <div style="display: flex; align-items: center; gap: 30px">
-        <!-- Logo image -->
-        <img
-          src="/New folder (2)/a79a0e6f5b7ae7cf167b9dd215ed464e-removebg-preview.png"
-          alt="Logo"
-          class="logo-navbar"
-        />
-        <!-- Dark/Light mode toggle switch -->
-        <label class="switch">
-          <!-- Sun icon for light mode -->
-          <span class="sun">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <g fill="#ffd43b">
-                <circle r="5" cy="12" cx="12"></circle>
-                <path
-                  d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
-                ></path>
-              </g>
-            </svg>
-          </span>
-          <!-- Moon icon for dark mode -->
-          <span class="moon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-              <path
-                d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
-              />
-            </svg>
-          </span>
-          <!-- Toggle checkbox input -->
-          <input type="checkbox" class="input" id="toggle-dark" />
-          <!-- Slider for the toggle switch -->
-          <span class="slider"></span>
-        </label>
-      </div>
-
-      <!-- Navigation links -->
-      <ul class="nav-links">
-        <li><a href="/toy store/store.html">Home</a></li>
-        <li><a href="/toy store/games.HTML">Toys</a></li>
-        <li><a href="/toy store/contact_us.html">Contact us</a></li>
-        <li><a href="/toy store/About.html">About</a></li>
-      </ul>
-    </header>
-
-    <!-- Hero Section with background image and heading -->
-    <section class="hero">
-      <img
-        class="bg"
-        src="/toy store/New folder/20250625_1502_image.png"
-        alt="Toys"
-      />
-      <h1>Welcome to toy store🎉</h1>
-    </section>
-
-    <!-- Products Section -->
-    <section class="products">
-      <h2>Products</h2>
-      <div class="product-grid">
-        <!-- Product Card 1 -->
-        <div
-          class="product-card"
-          data-name="تيشرت Forky Art"
-          data-desc="تصميم عكسي مستوحى من Forky."
-          data-price="150"
-        >
-          <img src="/toy store/New folder/view (1).png" alt="تيشرت Forky Art" />
-          <h3>تيشرت Forky Art</h3>
-          <div class="rating">★★★★★</div>
-          <div class="desc">تصميم عكسي مستوحى من Forky.</div>
-          <div class="bottom">
-            <div class="price">$150</div>
-            <button class="add-cart">🛒</button>
-          </div>
-        </div>
-
-        <!-- Product Card 2 -->
-        <div
-          class="product-card"
-          data-name="تيشرت Buzz Lightyear"
-          data-desc="تيشيرت مطبوع عليه Buzz Lightyear لمحبي Toy Story."
-          data-price="170"
-        >
-          <img
-            src="/toy store/New folder/7807107060872.png"
-            alt="Buzz Lightyear Shirt"
-          />
-          <h3>تيشرت Buzz Lightyear</h3>
-          <div class="rating">★★★★☆</div>
-          <div class="desc">
-            تيشيرت مطبوع عليه Buzz Lightyear لمحبي Toy Story.
-          </div>
-          <div class="bottom">
-            <div class="price">$170</div>
-            <button class="add-cart">🛒</button>
-          </div>
-        </div>
-
-        <!-- Product Card 3 -->
-        <div
-          class="product-card"
-          data-name="توتي باج Buzz Lightyear"
-          data-desc="تصميم كلاسيكي مستوحى من شخصية Buzz Lightyear الشهيرة."
-          data-price="160"
-        >
-          <img
-            src="/toy store/New folder/442039712248.png"
-            alt="Tote bag Buzz"
-          />
-          <h3>توتي باج Buzz Lightyear</h3>
-          <div class="rating">★★★★★</div>
-          <div class="desc">
-            تصميم كلاسيكي مستوحى من شخصية Buzz Lightyear الشهيرة.
-          </div>
-          <div class="bottom">
-            <div class="price">$160</div>
-            <button class="add-cart">🛒</button>
-          </div>
-        </div>
-
-        <!-- Product Card 4 -->
-        <div
-          class="product-card"
-          data-name=" جاكيت Toy Story Logo"
-          data-desc="شعار Toy Story المميز لمحبي ."
-          data-price="140"
-        >
-          <img
-            src="/toy store/New folder/downlod.png"
-            alt="Toy Story Logo Jacket"
-          />
-          <h3>جاكيت Toy Story Logo</h3>
-          <div class="rating">★★★★☆</div>
-          <div class="desc">شعار Toy Story المميز لمحبي</div>
-          <div class="bottom">
-            <div class="price">$140</div>
-            <button class="add-cart">🛒</button>
-          </div>
-        </div>
-
-        <!-- Product Card 5 -->
-        <div
-          class="product-card"
-          data-name="تيشرت Aliens"
-          data-desc="تيشيرت بتصميم الفضائيين من Toy Story."
-          data-price="155"
-        >
-          <img src="/toy store/New folder/view.png" alt="Aliens Shirt" />
-          <h3>تيشرت Aliens</h3>
-          <div class="rating">★★★☆☆</div>
-          <div class="desc">تيشيرت بتصميم الفضائيين من Toy Story.</div>
-          <div class="bottom">
-            <div class="price">$155</div>
-            <button class="add-cart">🛒</button>
-          </div>
-        </div>
-
-        <!-- Product Card 6 -->
-        <div
-          class="product-card"
-          data-name="كاب Rex"
-          data-desc="تصميم فني مميز للشخصية Rex على الكاب."
-          data-price="165"
-        >
-          <img
-            src="/toy store/New folder/4507059940337.png"
-            alt="Forky Art Shirt"
-          />
-          <h3>كاب Rex</h3>
-          <div class="rating">★★★★★</div>
-          <div class="desc">تصميم فني مميز للشخصية Rex على الكاب.</div>
-          <div class="bottom">
-            <div class="price">$165</div>
-            <button class="add-cart">🛒</button>
-          </div>
-        </div>
-
-        <!-- Product Card 7 -->
-        <div
-          class="product-card"
-          data-name=" ساعة Aliens"
-          data-desc="ساعة بتصميم الفضائيين من Toy Story."
-          data-price="175"
-        >
-          <img
-            src="/toy store/New folder/1907106850331.png"
-            alt="Pizza Planet Shirt"
-          />
-          <h3>ساعة Aliens</h3>
-          <div class="rating">★★★★☆</div>
-          <div class="desc">ساعة بتصميم الفضائيين من Toy Story.</div>
-          <div class="bottom">
-            <div class="price">$175</div>
-            <button class="add-cart">🛒</button>
-          </div>
-        </div>
-
-        <!-- Product Card 8 -->
-        <div
-          class="product-card"
-          data-name="تيشرت Toy Story Crew"
-          data-desc="تصميم جماعي يحتوي على كل شخصيات Toy Story."
-          data-price="180"
-        >
-          <img
-            src="/toy store/New folder/7807107060868.png"
-            alt="Toy Story Crew Shirt"
-          />
-          <h3>تيشرت Toy Story Crew</h3>
-          <div class="rating">★★★★★</div>
-          <div class="desc">تصميم جماعي يحتوي على كل شخصيات Toy Story.</div>
-          <div class="bottom">
-            <div class="price">$180</div>
-            <button class="add-cart">🛒</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Product Modal (hidden by default) -->
-    <div id="product-modal" class="modal hidden">
-      <div class="modal-content">
-        <!-- Close button for modal -->
-        <span class="close-btn" id="close-modal">&times;</span>
-        <!-- Modal product image -->
-        <img id="modal-img" src="" alt="" />
-        <div class="modal-info">
-          <!-- Modal product name -->
-          <h3 id="modal-name"></h3>
-          <!-- Modal product description -->
-          <p id="modal-desc"></p>
-          <!-- Modal product price -->
-          <p id="modal-price"></p>
-          <!-- Color selection options -->
-          <div class="colors">
-            <label>اختر اللون:</label>
-            <div class="color-option" style="background: red"></div>
-            <div class="color-option" style="background: green"></div>
-            <div class="color-option" style="background: blue"></div>
-          </div>
-          <!-- Size selection options -->
-          <div class="sizes">
-            <label>اختر المقاس:</label>
-            <button class="size">S</button>
-            <button class="size">M</button>
-            <button class="size">L</button>
-          </div>
-          <!-- Add to cart button -->
-          <button class="add-to-cart" id="modal-add-to-cart">
-            أضف إلى السلة
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Section -->
-    <footer>
-      <ul>
-        <li><a href="/toy store/store.html">Home</a></li>
-        <li><a href="/toy store/games.HTML">Toys</a></li>
-        <li><a href="/toy store/contact_us.html">Contact us</a></li>
-        <li><a href="/toy store/we.html">About</a></li>
-      </ul>
-      <!-- Footer logo -->
-      <img
-        src="/New folder (2)/a79a0e6f5b7ae7cf167b9dd215ed464e-removebg-preview.png"
-        alt="Logo"
-      />
-      <!-- Copyright text -->
-      <p>© 2025 جميع الحقوق محفوظة.</p>
-    </footer>
-
-    <!-- JavaScript for interactive functionality -->
-    <script>
-      // Modal elements references
-      const modal = document.getElementById("product-modal");
-      const closeBtn = document.getElementById("close-modal");
-      const modalImg = document.getElementById("modal-img");
-      const modalName = document.getElementById("modal-name");
-      const modalDesc = document.getElementById("modal-desc");
-      const modalPrice = document.getElementById("modal-price");
-      const modalAddBtn = document.getElementById("modal-add-to-cart");
-
-      // Add click event to all "Add to Cart" buttons
-      document.querySelectorAll(".product-card .add-cart").forEach((btn) => {
-        btn.onclick = () => {
-          const card = btn.closest(".product-card");
-          const productImage = card.querySelector("img").src;
-
-          // Set modal content based on clicked product
-          modalImg.src = productImage;
-          modalName.textContent = card.getAttribute("data-name");
-          modalDesc.textContent = card.getAttribute("data-desc");
-          modalPrice.textContent = card.getAttribute("data-price") + " ﷼";
-          modal.classList.remove("hidden");
-        };
-      });
-
-      // Close modal when close button is clicked
-      closeBtn.onclick = () => modal.classList.add("hidden");
-
-      // Add to cart functionality in modal
-      modalAddBtn.onclick = () => {
-        alert("تم الإضافة إلى السلة!");
-        modal.classList.add("hidden");
-      };
-
-      // Color selection functionality
-      document.querySelectorAll(".color-option").forEach((o) => {
-        o.onclick = () => {
-          document
-            .querySelectorAll(".color-option")
-            .forEach((v) => v.classList.remove("selected"));
-          o.classList.add("selected");
-        };
-      });
-
-      // Size selection functionality
-      document.querySelectorAll(".size").forEach((s) => {
-        s.onclick = () => {
-          document
-            .querySelectorAll(".size")
-            .forEach((v) => v.classList.remove("selected"));
-          s.classList.add("selected");
-        };
-      });
-
-      // Navbar color change on scroll
-      const navbar = document.querySelector(".navbar");
-      window.addEventListener("scroll", () => {
-        navbar.classList.toggle("scrolled", window.scrollY > 50);
-      });
-
-      // Dark mode toggle functionality
-      const toggle = document.getElementById("toggle-dark");
-
-      // Check for saved dark mode preference
-      if (localStorage.getItem("darkMode") === "enabled") {
-        document.body.classList.add("dark-mode");
-        toggle.checked = true;
-      }
-
-      // Toggle dark mode and save preference
-      toggle.addEventListener("change", () => {
-        document.body.classList.toggle("dark-mode");
-
-        if (document.body.classList.contains("dark-mode")) {
-          localStorage.setItem("darkMode", "enabled");
-        } else {
-          localStorage.setItem("darkMode", "disabled");
-        }
-      });
-    </script>
-  </body>
-</html>
