@@ -1,0 +1,387 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #fff;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: linear-gradient(to right, #007bff, #f8b500);
+  transition: background-color 0.3s ease;
+}
+
+.logo-navbar {
+  height: 50px;
+  margin-left: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin-right: auto;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.nav-links li a:hover {
+  background-color: #f8b500;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  padding: 120px 20px 60px;
+  background: linear-gradient(to right, #007bff, #f8b500);
+  color: white;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+}
+
+.hero-img {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-img img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+/* Features Section */
+.features {
+  padding: 60px 20px;
+  background-color: #fff4e5;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #c62828;
+}
+
+.feature-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 260px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-card img {
+  width: 200px;
+  margin-bottom: 15px;
+  border-radius: 16px;
+}
+
+.feature-card h3 {
+  color: #f8b500;
+  margin-bottom: 10px;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 60px 20px;
+  background: #e3f2fd;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 28px;
+  color: #1a2a43;
+  margin-bottom: 30px;
+}
+
+.gallery-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-images img {
+  width: 300px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  background-color: #1a2a43;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ==========================
+        Dark Mode Styles
+========================== */
+
+/* Dark Mode Base */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Dark Mode Navigation */
+body.dark-mode .navbar {
+  background: linear-gradient(to right, #0d47a1, #b28900);
+}
+
+body.dark-mode .nav-links li a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .nav-links li a:hover {
+  background-color: #f8b500;
+  color: #121212;
+}
+
+/* Dark Mode Hero Section */
+body.dark-mode .hero {
+  background: linear-gradient(to right, #1a237e, #ff8f00);
+  color: #fff;
+}
+
+body.dark-mode .hero h1 {
+  color: #f8b500;
+}
+
+body.dark-mode .hero p {
+  color: #ddd;
+}
+
+/* Dark Mode Features */
+body.dark-mode .features {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .features h2 {
+  color: #ff7043;
+}
+
+body.dark-mode .feature-card {
+  background-color: #2a2a2a;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .feature-card h3 {
+  color: #f8b500;
+}
+
+body.dark-mode .feature-card img {
+  filter: brightness(0.9);
+}
+
+/* Dark Mode Gallery */
+body.dark-mode .gallery {
+  background-color: #212121;
+}
+
+body.dark-mode .gallery h2 {
+  color: #f8b500;
+}
+
+body.dark-mode .gallery-images img {
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.05);
+  filter: brightness(0.9);
+}
+
+/* Dark Mode Footer */
+body.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode .footer p {
+  color: #aaa;
+}
+
+/* Dark Mode Toggle Button */
+.toggle-btn {
+  background-color: #f8b500;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #d19a00;
+}
+
+body.dark-mode .toggle-btn {
+  background-color: #d32f2f;
+}
+
+body.dark-mode .toggle-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* Dark/Light Mode Switch */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73c0fc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+/* Sun and Moon Icons */
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  animation: rotate 15s linear infinite;
+}
+
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  animation: tilt 5s linear infinite;
+}
+
+/* Animations */
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Switch States */
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
